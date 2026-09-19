@@ -1,23 +1,23 @@
-import { trainingEventLines, previewEventProgress, matchPresentation, victoryReaction, formatMatchScore, isSavedRevengeAttempt } from "./campaign_presentation.js?v=20260920-pages-debug-a1";
-import { pixelReady, pixelActorMarkup, mountPixelActors, clearPixelActors, playPixelTraining, playPixelRevenge } from "./pixel_scene.js?v=20260920-pages-debug-a1";
-import { COMMANDS, getStageCommands } from "./data.js?v=20260920-pages-debug-a1";
-import { createGameState, advanceTurn, getCommandState, previewCommandStats } from "./game.js?v=20260920-pages-debug-a1";
-import { getGalleryItems, getGyaruClearProgress, loadReachedEndings, loadUnlockedGallery, unlockGalleryItem, unlockEventArtwork } from "./gallery.js?v=20260920-pages-debug-a1";
-import { hasSeenDialogue, markDialogueSeen } from "./dialogue_log.js?v=20260920-pages-debug-a1";
-import { STAGES, applyHeroineName, canChallengeHiddenRound, createCampaignStage, getAcquiredMoves, getTrainingMatchForecast, getTrainingStatTargets, resolveCampaignOpponent } from "./stages.js?v=20260920-pages-debug-a1";
-import { playActionSequence } from "./sequence.js?v=20260920-pages-debug-a1";
-import { playBattleScene, getRoundBattlePresentation } from "./battle_scene.js?v=20260920-pages-debug-a1";
-import { getSpectatorFighters, getSpectatorMove, createSpectatorCard } from "./spectator.js?v=20260920-pages-debug-a1";
-import { CONTENT } from "./content.js?v=20260920-pages-debug-a1";
-import { loadCampaignSave, saveCampaignProgress, clearCampaignSave } from "./campaign_save.js?v=20260920-pages-debug-a1";
-import { getAudioSettings, setAudioSettings, playSfx as playConfiguredSfx, unlockAudio, playBgm, stopBgm, configureAudioSources } from "./audio.js?v=20260920-pages-debug-a1";
-import { resolveDialoguePresentation } from "./content_media.js?v=20260920-pages-debug-a1";
-import { getCornerProgress, recordCornerProgress, resetCornerProgress, getEffectiveCornerThresholds } from "./corner_progress.js?v=20260920-pages-debug-a1";
+import { trainingEventLines, previewEventProgress, matchPresentation, victoryReaction, formatMatchScore, isSavedRevengeAttempt } from "./campaign_presentation.js?v=20260920-gallery-spoilers-a1";
+import { pixelReady, pixelActorMarkup, mountPixelActors, clearPixelActors, playPixelTraining, playPixelRevenge } from "./pixel_scene.js?v=20260920-gallery-spoilers-a1";
+import { COMMANDS, getStageCommands } from "./data.js?v=20260920-gallery-spoilers-a1";
+import { createGameState, advanceTurn, getCommandState, previewCommandStats } from "./game.js?v=20260920-gallery-spoilers-a1";
+import { getGalleryItems, getGyaruClearProgress, loadReachedEndings, loadUnlockedGallery, unlockGalleryItem, unlockEventArtwork, LOCKED_HIDDEN_CONTENT_HINT } from "./gallery.js?v=20260920-gallery-spoilers-a1";
+import { hasSeenDialogue, markDialogueSeen } from "./dialogue_log.js?v=20260920-gallery-spoilers-a1";
+import { STAGES, applyHeroineName, canChallengeHiddenRound, createCampaignStage, getAcquiredMoves, getTrainingMatchForecast, getTrainingStatTargets, resolveCampaignOpponent } from "./stages.js?v=20260920-gallery-spoilers-a1";
+import { playActionSequence } from "./sequence.js?v=20260920-gallery-spoilers-a1";
+import { playBattleScene, getRoundBattlePresentation } from "./battle_scene.js?v=20260920-gallery-spoilers-a1";
+import { getSpectatorFighters, getSpectatorMove, createSpectatorCard } from "./spectator.js?v=20260920-gallery-spoilers-a1";
+import { CONTENT } from "./content.js?v=20260920-gallery-spoilers-a1";
+import { loadCampaignSave, saveCampaignProgress, clearCampaignSave } from "./campaign_save.js?v=20260920-gallery-spoilers-a1";
+import { getAudioSettings, setAudioSettings, playSfx as playConfiguredSfx, unlockAudio, playBgm, stopBgm, configureAudioSources } from "./audio.js?v=20260920-gallery-spoilers-a1";
+import { resolveDialoguePresentation } from "./content_media.js?v=20260920-gallery-spoilers-a1";
+import { getCornerProgress, recordCornerProgress, resetCornerProgress, getEffectiveCornerThresholds } from "./corner_progress.js?v=20260920-gallery-spoilers-a1";
 
-import { createYukitoGuide, getYukitoGuideStatus, recordYukitoGuideStep, yukitoIconMarkup, loadYukitoIntroduction, recordYukitoIntroduction } from "./yukito_guide.js?v=20260920-pages-debug-a1";
+import { createYukitoGuide, getYukitoGuideStatus, recordYukitoGuideStep, yukitoIconMarkup, loadYukitoIntroduction, recordYukitoIntroduction } from "./yukito_guide.js?v=20260920-gallery-spoilers-a1";
 
-import { getLanguage, englishAvailable, setLanguage, localizeUI, observeLocalizedUI } from "./i18n.js?v=20260920-pages-debug-a1";
-import { GAME_VERSION, SAVE_VERSION } from "./version.js?v=20260920-pages-debug-a1";
+import { getLanguage, englishAvailable, setLanguage, localizeUI, observeLocalizedUI } from "./i18n.js?v=20260920-gallery-spoilers-a1";
+import { GAME_VERSION, SAVE_VERSION } from "./version.js?v=20260920-gallery-spoilers-a1";
 
 const app = document.querySelector("#app");
 configureAudioSources(CONTENT.audio);
@@ -72,7 +72,7 @@ function canUseYukitoGuide() {
 function playSfx(id) {
   return playConfiguredSfx(id, { builtin: state.currentStage?.mode === "hidden" && ["conversation", "game", "victory-fight", "yarisugi-fight", "ending"].includes(state.screen) });
 }
-const ASSET_VERSION = "20260920-pages-debug-a1";
+const ASSET_VERSION = "20260920-gallery-spoilers-a1";
 const acquiredMoveRenderSnapshots = new WeakMap();
 const TRAINING_STAT_LABELS = {
   pow: "POW",
@@ -2085,8 +2085,8 @@ function renderGallery() {
                  <span class="gallery-thumb-fallback">CG Placeholder</span>`
               : `<span class="gallery-lock-mark" aria-hidden="true">◆</span><span>LOCKED</span>`}
           </div>
-          <strong>${escapeHtml(item.title)}</strong>
-          <span>${item.unlocked ? escapeHtml(item.description) : "この記録はまだ空白です。"}</span>
+          <strong>${escapeHtml(item.displayTitle)}</strong>
+          <span>${escapeHtml(item.displayDescription)}</span>
         </button>
       `).join("");
       const unlockedCount = tabItems.filter((item) => item.unlocked).length;
@@ -2125,7 +2125,7 @@ function renderGallery() {
           <div class="gallery-extras-entry">
             <button class="secondary-btn" data-action="open-spectator" ${extras.allCleared ? "" : "disabled"}>試合観戦モード${extras.allCleared ? "" : "（未解放）"}</button>
             <button class="secondary-btn" data-action="open-extras" ${extras.allCleared ? "" : "disabled"}>おまけ${extras.allCleared ? "" : "（未解放）"}</button>
-            <small>${extras.allCleared ? "瑞花のゲームで遊ぶ" : `3人でギャルに勝つと解放（${extras.clearedHeroineIds.length}/3）`}</small>
+            <small>${extras.allCleared ? "瑞花のゲームで遊ぶ" : LOCKED_HIDDEN_CONTENT_HINT}</small>
           </div>
         </div>
         <div class="gallery-album-shell">

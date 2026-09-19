@@ -9,7 +9,7 @@ try { if (globalThis.localStorage?.getItem(LANGUAGE_STORAGE_KEY) === "en") langu
 let catalog = {};
 let available = false;
 try {
-  const response = await fetch("content/locales/en.json?v=20260920-pages-debug-a1");
+  const response = await fetch("content/locales/en.json?v=20260920-gallery-spoilers-a1");
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   catalog = await response.json();
   available = catalog.version === 1 && typeof catalog.messages === "object";

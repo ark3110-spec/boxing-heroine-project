@@ -1,4 +1,4 @@
-import { COMMANDS } from "./data.js?v=20260920-pages-debug-a1";
+import { COMMANDS } from "./data.js?v=20260920-gallery-spoilers-a1";
 
 // ステージが statLimits を定義していない場合の保険値。
 // 実際の上限・下限は各ステージ定義（stages.js）側で持たせる。

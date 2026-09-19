@@ -1,6 +1,6 @@
-import { playSfx } from "./audio.js?v=20260920-pages-debug-a1";
+import { playSfx } from "./audio.js?v=20260920-gallery-spoilers-a1";
 // Additive arcade presentation. No game state, stats or save data lives here.
-const VERSION = "20260920-pages-debug-a1";
+const VERSION = "20260920-gallery-spoilers-a1";
 const enabled = new URLSearchParams(location.search).get("pixel") !== "0";
 const url = (src) => `${src}${src.includes("?") ? "&" : "?"}v=${VERSION}`;
 let catalog = null;

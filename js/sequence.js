@@ -1,4 +1,4 @@
-import { playSfx, playBgm, stopBgm } from "./audio.js?v=20260920-pages-debug-a1";
+import { playSfx, playBgm, stopBgm } from "./audio.js?v=20260920-gallery-spoilers-a1";
 
 export async function playActionSequence(app, sequenceData, onComplete) {
   app.innerHTML = renderSequence(sequenceData);

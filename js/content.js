@@ -1,4 +1,4 @@
-import { TRAINING_HEROINE_FALLBACK, TRAINING_COMMAND_FALLBACK } from "./training_texts.js?v=20260920-pages-debug-a1";
+import { TRAINING_HEROINE_FALLBACK, TRAINING_COMMAND_FALLBACK } from "./training_texts.js?v=20260920-gallery-spoilers-a1";
 
 const fallback = {
   heroines: TRAINING_HEROINE_FALLBACK,
@@ -19,7 +19,7 @@ const fallback = {
 
 async function loadJson(name, fallbackValue) {
   try {
-    const response = await fetch(`content/${name}.json?v=20260920-pages-debug-a1`, { cache: "no-cache" });
+    const response = await fetch(`content/${name}.json?v=20260920-gallery-spoilers-a1`, { cache: "no-cache" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return await response.json();
   } catch (error) {

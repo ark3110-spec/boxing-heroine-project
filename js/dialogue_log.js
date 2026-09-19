@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "./data.js?v=20260920-pages-debug-a1";
+import { STORAGE_KEYS } from "./data.js?v=20260920-gallery-spoilers-a1";
 
 // 既読会話の記録（DEC-055 #9）。会話イベントIDを永続保存し、周回の自動スキップ判定に使う。
 // キャンペーン途中保存とは独立し、保存不能でも進行を止めない。

@@ -1,6 +1,8 @@
-import { GALLERY_BASE_ITEMS, STORAGE_KEYS } from "./data.js?v=20260920-pages-debug-a1";
+import { GALLERY_BASE_ITEMS, STORAGE_KEYS } from "./data.js?v=20260920-gallery-spoilers-a1";
 
-import { CONTENT } from "./content.js?v=20260920-pages-debug-a1";
+import { CONTENT } from "./content.js?v=20260920-gallery-spoilers-a1";
+
+export const LOCKED_HIDDEN_CONTENT_HINT = "特定の条件を満たすと解放されます。";
 
 const LEGACY_CAMPAIGN_HEROINE_ALIASES = [
   { codePoints: [115, 104, 105, 122, 117, 107, 97], current: "tsubaki" },
@@ -118,10 +120,17 @@ export function unlockEventArtwork(imagePath) {
 export function getGalleryItems() {
   const unlocked = reconcileUnlockedGallery();
   const extrasUnlocked = getGyaruClearProgress().allCleared;
-  return GALLERY_BASE_ITEMS.filter((item) => item.stageId !== "stage1" || extrasUnlocked).map((item) => ({
-    ...item,
-    unlocked: unlocked?.has(item.id) || false,
-  }));
+  return GALLERY_BASE_ITEMS.filter((item) => item.stageId !== "stage1" || extrasUnlocked).map((item) => {
+    const isUnlocked = unlocked.has(item.id);
+    const conceal = !isUnlocked && (item.hideTitleUntilUnlocked || item.stageId === "stage1");
+    return {
+      ...item,
+      unlocked: isUnlocked,
+      displayTitle: conceal ? "？？？" : item.title,
+      displayDescription: isUnlocked ? item.description
+        : conceal ? LOCKED_HIDDEN_CONTENT_HINT : "この記録はまだ空白です。",
+    };
+  });
 }
 
 // True records already mean a win/KO over the gyaru champion. Reuse both
