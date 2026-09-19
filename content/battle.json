@@ -1,0 +1,444 @@
+{
+  "tempo": 1,
+  "spectator": {
+    "fighterIds": [
+      "ren",
+      "tsubaki",
+      "amane",
+      "mob",
+      "champion",
+      "gyaru"
+    ],
+    "mouthPoints": {
+      "mob": [
+        0.53,
+        0.45
+      ]
+    },
+    "finishers": {
+      "mob": {
+        "name": "ストレート",
+        "frames": [
+          "straight"
+        ],
+        "impactFrame": "straight",
+        "frameDuration": 240
+      },
+      "champion": {
+        "name": "ストレート",
+        "frames": [
+          "straight"
+        ],
+        "impactFrame": "straight",
+        "frameDuration": 240
+      }
+    }
+  },
+  "backgrounds": {
+    "default": "assets/backgrounds/OP/arena.png",
+    "mob": "assets/backgrounds/OP/arena.png"
+  },
+  "fighters": {
+    "ren": {
+      "name": "紅 蓮華",
+      "themeColor": "#e23b4e",
+      "facing": "right",
+      "scale": 0.92,
+      "sprites": {
+        "stance": "assets/characters/ren/fight/stance.png",
+        "straight": "assets/characters/ren/fight/straight.png",
+        "damage_face": "assets/characters/ren/fight/damage.png",
+        "stagger": "assets/characters/ren/fight/stagger.png",
+        "utility": "assets/characters/ren/fight/utility.png",
+        "special_charge": "assets/characters/ren/fight/special_charge_v3.png",
+        "special_impact": "assets/characters/ren/fight/special_impact_v2.png",
+        "special_recovery": "assets/characters/ren/fight/special_recovery.png",
+        "down": "assets/characters/ren/fight/down.png"
+      },
+      "spritePresentation": {
+        "special_charge": {
+          "renderScale": 1.211
+        },
+        "special_impact": {
+          "renderScale": 1.21,
+          "contactPoint": [
+            0.63,
+            0.16
+          ]
+        },
+        "special_recovery": {
+          "renderScale": 1.066
+        }
+      },
+      "finisher": {
+        "frames": [
+          "special_charge",
+          "special_impact",
+          "special_recovery"
+        ],
+        "frameDuration": 220,
+        "impactFrame": "special_impact",
+        "frameDurations": {
+          "special_charge": 320,
+          "special_impact": 150,
+          "special_recovery": 260
+        },
+        "cutinImage": "assets/characters/ren/fight/cutin_face.png"
+      },
+      "feel": {
+        "anticipationMs": 170,
+        "recoveryMs": 380,
+        "resetMs": 240,
+        "hitStopMs": 84,
+        "shakeThreshold": 7
+      },
+      "mouthPoint": [
+        0.56,
+        0.3
+      ],
+      "victoryImage": "assets/gallery/endings/ren_match_victory.png",
+      "victoryCaption": "蓮華は勝利を聞き、誇らしげに笑った。"
+    },
+    "tsubaki": {
+      "name": "氷室 椿",
+      "themeColor": "#748bb5",
+      "facing": "right",
+      "scale": 0.926,
+      "sprites": {
+        "stance": "assets/characters/tsubaki/fight/stance.png",
+        "straight": "assets/characters/tsubaki/fight/straight.png",
+        "damage_face": "assets/characters/tsubaki/fight/damage.png",
+        "stagger": "assets/characters/tsubaki/fight/stagger.png",
+        "utility": "assets/characters/tsubaki/fight/special_read.png",
+        "special_read": "assets/characters/tsubaki/fight/special_read.png",
+        "special_impact": "assets/characters/tsubaki/fight/special_impact.png",
+        "special_reset": "assets/characters/tsubaki/fight/special_reset.png",
+        "down": "assets/characters/tsubaki/fight/down.png"
+      },
+      "spritePresentation": {
+        "special_read": {
+          "renderScale": 0.963
+        },
+        "special_impact": {
+          "renderScale": 0.939,
+          "contactPoint": [
+            0.84,
+            0.32
+          ]
+        },
+        "special_reset": {
+          "renderScale": 0.94
+        },
+        "utility": {
+          "renderScale": 0.963
+        }
+      },
+      "finisher": {
+        "frames": [
+          "special_read",
+          "special_impact",
+          "special_reset"
+        ],
+        "frameDuration": 220,
+        "impactFrame": "special_impact",
+        "frameDurations": {
+          "special_read": 340,
+          "special_impact": 120,
+          "special_reset": 240
+        },
+        "counterLead": {
+          "attackPose": "straight",
+          "evadePose": "special_read",
+          "evadeHoldMs": 380,
+          "pauseMs": 180
+        },
+        "cutinImage": "assets/characters/tsubaki/fight/cutin_face.png"
+      },
+      "feel": {
+        "anticipationMs": 125,
+        "recoveryMs": 360,
+        "resetMs": 210,
+        "hitStopMs": 64,
+        "shakeThreshold": 8
+      },
+      "mouthPoint": [
+        0.52,
+        0.26
+      ],
+      "victoryImage": "assets/gallery/endings/tsubaki_match_victory.png",
+      "victoryCaption": "椿は小さく息を吐き、口元を緩めた。"
+    },
+    "amane": {
+      "name": "因幡 甘音",
+      "themeColor": "#d6a348",
+      "facing": "right",
+      "scale": 1.021,
+      "sprites": {
+        "stance": "assets/characters/amane/fight/stance.png",
+        "straight": "assets/characters/amane/fight/straight_v2.png",
+        "damage_face": "assets/characters/amane/fight/damage.png",
+        "stagger": "assets/characters/amane/fight/stagger.png",
+        "utility": "assets/characters/amane/fight/utility.png",
+        "special_entry": "assets/characters/amane/fight/special_entry_v2.png",
+        "special_break": "assets/characters/amane/fight/special_break_v2.png",
+        "special_finish": "assets/characters/amane/fight/special_finish_v2.png",
+        "down": "assets/characters/amane/fight/down_palette_20260918.png"
+      },
+      "spritePresentation": {
+        "special_entry": {
+          "renderScale": 1.156
+        },
+        "special_break": {
+          "renderScale": 0.983
+        },
+        "special_finish": {
+          "renderScale": 0.971
+        }
+      },
+      "finisher": {
+        "frames": [
+          "special_entry",
+          "special_break",
+          "special_finish"
+        ],
+        "frameDuration": 220,
+        "impactFrame": "special_finish",
+        "frameDurations": {
+          "special_entry": 130,
+          "special_break": 115,
+          "special_finish": 165
+        },
+        "cutinImage": "assets/characters/amane/fight/cutin_face.png",
+        "background": "assets/backgrounds/arena_corner_rush_20260919.png",
+        "cornerRush": {
+          "frames": [
+            "special_entry",
+            "special_break"
+          ],
+          "hits": 6,
+          "pushMs": 420,
+          "punchMs": 100,
+          "recoveryMs": 115
+        }
+      },
+      "feel": {
+        "anticipationMs": 90,
+        "recoveryMs": 320,
+        "resetMs": 190,
+        "hitStopMs": 48,
+        "shakeThreshold": 9
+      },
+      "mouthPoint": [
+        0.51,
+        0.39
+      ],
+      "victoryImage": "assets/gallery/endings/amane_match_victory.png",
+      "victoryCaption": "甘音の顔に、ぱっと笑みが広がった。"
+    },
+    "mob": {
+      "name": "新人ボクサー",
+      "themeColor": "#8a97ab",
+      "facing": "right",
+      "scale": 1.229,
+      "sprites": {
+        "stance": "assets/characters/mob/fight/stance_v2.png",
+        "straight": "assets/characters/mob/fight/straight_v2.png",
+        "damage_face": "assets/characters/mob/fight/damage_face_v2.png",
+        "utility": "assets/characters/mob/fight/utility_v2.png",
+        "down": "assets/characters/mob/fight/down_v2.png"
+      },
+      "victoryCaption": "新人ボクサーは、勝利を聞いて笑顔になった。",
+      "victoryImage": "assets/gallery/opponents/mob_match_victory_20260919.png",
+      "victoryOnKnockout": true
+    },
+    "champion": {
+      "name": "現チャンピオン",
+      "mouthPoint": [
+        0.55,
+        0.39
+      ],
+      "themeColor": "#b8b1aa",
+      "facing": "right",
+      "scale": 1.072,
+      "sprites": {
+        "stance": "assets/characters/champion/fight/stance_v2.png",
+        "straight": "assets/characters/champion/fight/straight_v2.png",
+        "damage_face": "assets/characters/champion/fight/damage_face_v2.png",
+        "utility": "assets/characters/champion/fight/utility_v2.png",
+        "down": "assets/characters/champion/fight/down_v2.png"
+      },
+      "victoryCaption": "王座を守った王者の表情に、喜びがにじむ。",
+      "victoryImage": "assets/gallery/opponents/champion_match_victory_20260919.png",
+      "victoryOnKnockout": true
+    },
+    "gyaru": {
+      "name": "ギャル挑戦者",
+      "mouthPoint": [
+        0.57,
+        0.3
+      ],
+      "themeColor": "#d15aa5",
+      "facing": "right",
+      "scale": 0.896,
+      "sprites": {
+        "stance": "assets/characters/gyaru/stance_fatigue.png",
+        "jab": "assets/characters/gyaru/jab.png",
+        "damage_face": "assets/characters/gyaru/straight_damage.png",
+        "damage_body": "assets/characters/gyaru/uppercut_damage1.png",
+        "down": "assets/characters/gyaru/uppercut_damage3.png"
+      },
+      "finisher": {
+        "frames": [
+          "stance",
+          "jab"
+        ],
+        "impactFrame": "jab",
+        "frameDuration": 180,
+        "cutinImage": "assets/characters/gyaru/cutin_face.png",
+        "cutinLabel": "FINISH"
+      },
+      "victoryCaption": "ギャル挑戦者は、満足そうに笑った。",
+      "victoryImage": "assets/gallery/opponents/gyaru_match_victory_20260919.png",
+      "victoryOnKnockout": true
+    }
+  },
+  "presentationByRound": {
+    "rival": {
+      "openingEvents": [
+        {
+          "actor": "right",
+          "action": "straight",
+          "hit": false
+        },
+        {
+          "actor": "left",
+          "action": "jab",
+          "hit": true,
+          "damage": 4
+        },
+        {
+          "actor": "right",
+          "action": "body",
+          "hit": true,
+          "damage": 5
+        }
+      ]
+    },
+    "champion": {
+      "readyLabel": "花冠王座戦",
+      "preBellMs": 850,
+      "roundIntroMs": 900,
+      "resultHoldMs": 2100,
+      "koMouthpiece": true
+    },
+    "gyaru": {
+      "readyLabel": "ギャル挑戦者との決戦",
+      "preBellMs": 600,
+      "roundIntroMs": 800,
+      "resultHoldMs": 1900,
+      "lowHpEmphasis": true,
+      "koMouthpiece": true,
+      "eventsByResult": {
+        "win": [
+          {
+            "actor": "left",
+            "action": "straight",
+            "hit": true,
+            "damage": 8
+          },
+          {
+            "actor": "right",
+            "action": "jab",
+            "hit": true,
+            "damage": 8
+          },
+          {
+            "actor": "right",
+            "action": "straight",
+            "hit": true,
+            "damage": 10,
+            "heavy": true
+          },
+          {
+            "actor": "right",
+            "action": "body",
+            "hit": true,
+            "damage": 10,
+            "heavy": true
+          },
+          {
+            "actor": "left",
+            "action": "beat",
+            "id": "answer",
+            "pose": "stance",
+            "holdMs": 1000,
+            "calloutId": "coach"
+          },
+          {
+            "actor": "left",
+            "action": "special",
+            "damage": 30
+          }
+        ],
+        "ko": [
+          {
+            "actor": "left",
+            "action": "straight",
+            "hit": true,
+            "damage": 8
+          },
+          {
+            "actor": "right",
+            "action": "jab",
+            "hit": true,
+            "damage": 8
+          },
+          {
+            "actor": "right",
+            "action": "straight",
+            "hit": true,
+            "damage": 10,
+            "heavy": true
+          },
+          {
+            "actor": "right",
+            "action": "body",
+            "hit": true,
+            "damage": 10,
+            "heavy": true
+          },
+          {
+            "actor": "left",
+            "action": "beat",
+            "id": "answer",
+            "pose": "stance",
+            "holdMs": 1000,
+            "calloutId": "coach"
+          },
+          {
+            "actor": "left",
+            "action": "special",
+            "damage": 30
+          }
+        ]
+      },
+      "callouts": {
+        "coach": {
+          "speaker": "コーチ",
+          "text": "負けるな！！"
+        }
+      }
+    },
+    "mob": {
+      "basicFinishers": [
+        "ren"
+      ]
+    }
+  },
+  "koFinish": {
+    "hitStopMs": 180,
+    "staggerMs": 420,
+    "fallMs": 480,
+    "settleMs": 550
+  }
+}

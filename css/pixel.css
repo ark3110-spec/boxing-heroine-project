@@ -1,0 +1,36 @@
+/* Confined arcade windows keep the existing ADV and paper UI intact. */
+.pixel-stage { display: block; width: 96px; height: 96px; flex: 0 0 96px; overflow: hidden; }
+.pixel-stage-wide { width: 100%; height: auto; text-align: center; background: #253443; line-height: 0; }
+.pixel-canvas { display: inline-block; image-rendering: pixelated; image-rendering: crisp-edges; max-width: none; }
+.character-select-button:has(.pixel-stage) { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 12px; align-items: center; text-align: left; }
+.character-select-button > .pixel-stage { grid-row: 1 / 3; }
+.character-select-button > strong { align-self: end; }
+.character-select-button > span:not(.pixel-stage) { align-self: start; }
+.pixel-result { margin: 12px 0; border: 3px solid #353441; }
+.pixel-revenge { position: relative; min-height: 160px; background: #253443; text-align: center; }
+.pixel-revenge-banner { position: absolute; top: 8px; left: 0; right: 0; color: #fff3d5; background: #a92539; border-block: 2px solid #e9c775; font-family: var(--font-heading); font-size: clamp(1.25rem, 4vw, 2rem); line-height: 1.45; letter-spacing: .08em; text-shadow: 2px 2px #46101b; }
+.pixel-revenge .pixel-skip { display: block; margin: 6px auto; }
+.pixel-overlay { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 12px; background: #101928d9; }
+.pixel-moment { width: min(600px, 100%); background: #1e2b3b; color: #fff2d1; border: 3px solid #dcc7a1; box-shadow: 0 8px 0 #101622, 0 18px 55px #0009; overflow: hidden; }
+.pixel-moment header, .pixel-moment footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 12px; }
+.pixel-moment header { border-bottom: 2px solid #dcc7a1; }
+.pixel-moment header span { color: #efb560; letter-spacing: .12em; font-size: 16px; }
+.pixel-moment header strong { font-size: 20px; font-weight: 400; }
+.pixel-moment footer { border-top: 2px solid #dcc7a1; color: #b1c7cc; justify-content: flex-end; }
+.pixel-skip { min-height: 44px; padding: 6px 14px; color: #fff2d1; background: #35485a; border: 1px solid #8398a2; }
+.pixel-skip:focus-visible { outline: 3px solid #ffd271; outline-offset: 2px; }
+.pixel-time { height: 4px; background: #152130; }
+.pixel-time span { display: block; height: 4px; background: #efb560; transform-origin: left; animation: pixel-time var(--pixel-duration) linear forwards; }
+@keyframes pixel-time { to { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .pixel-time span { animation: none; } }
+@media (max-width: 420px) {
+  .character-select-button:has(.pixel-stage) { padding: 4px 8px; column-gap: 4px; }
+  .pixel-moment header, .pixel-moment footer { padding: 8px; gap: 4px; }
+  .pixel-moment header span { font-size: 13px; }
+  .pixel-moment header strong { font-size: 17px; }
+}
+
+/* At landscape phone heights, use a 1x scene so both controls remain visible. */
+@media (max-height: 480px) {
+  .pixel-moment { width: min(420px, 100%); }
+}

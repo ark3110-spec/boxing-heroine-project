@@ -1,0 +1,878 @@
+/* battle.css — battle_scene.js 専用スタイル（battle_test.html から読み込み） */
+/* 本編の style.css とは独立。クラスはすべて bs- プレフィックス */
+
+.bs-arena {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 10;
+  max-height: min(70vh, 600px);
+  min-height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #10141d;
+  border: 4px solid #f0c45d;
+  image-rendering: pixelated;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.bs-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.bs-bg-fallback {
+  background: linear-gradient(180deg, #1b2330 0%, #2a3a55 60%, #141a24 100%);
+}
+
+.bs-loading { display: grid; place-items: center; min-height: 50vh; background: #10141d; color: #f0c45d; }
+.bs-decision-blackout { position: absolute; inset: 0; background: #06080d; opacity: 0; z-index: 6; pointer-events: none; }
+.bs-arena[data-bs-decision="blackout"] .bs-decision-blackout { opacity: 1; }
+.bs-arena[data-bs-decision="spotlight"] .bs-bg { filter: brightness(.23); }
+.bs-spotlight { display: none; position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.bs-arena[data-bs-decision="spotlight"] .bs-spotlight { display: block; }
+.bs-arena[data-bs-winner="left"] .bs-spotlight { background: radial-gradient(ellipse at 29% 55%, #fff4b845 0%, transparent 48%); }
+.bs-arena[data-bs-winner="right"] .bs-spotlight { background: radial-gradient(ellipse at 71% 55%, #fff4b845 0%, transparent 48%); }
+.bs-arena[data-bs-winner="left"] .bs-fighter.right,
+.bs-arena[data-bs-winner="right"] .bs-fighter.left { filter: brightness(.22) saturate(.35); }
+.bs-arena[data-bs-winner="left"] .bs-fighter.left,
+.bs-arena[data-bs-winner="right"] .bs-fighter.right { filter: brightness(1.18) drop-shadow(0 0 14px #fff3aa80); }
+.bs-victory-art { position: absolute; inset: 16% 16% 24%; width: 68%; height: 60%; object-fit: contain; z-index: 6; background: #080b14eb; border: 1px solid #f0c45d; }
+.bs-victory-art[hidden], .bs-revenge[hidden] { display: none; }
+.bs-revenge { position: absolute; inset: 34% 0 auto; z-index: 10; padding: .45em .2em; border-block: 3px solid #f0c45d; background: #6e2036f5; color: #fff4ce; text-align: center; font-weight: 900; font-size: clamp(1.7rem, 7vw, 3.6rem); text-shadow: 3px 3px #111827; }
+
+/* ---- HUD -------------------------------------------------------------- */
+
+.bs-hud {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  right: 3%;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.bs-status {
+  flex: 1;
+  max-width: 42%;
+}
+
+.bs-status.right .bs-name {
+  text-align: right;
+}
+
+.bs-name {
+  color: #fff;
+  font-size: clamp(0.7rem, 2.4vw, 1rem);
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bs-hp {
+  height: clamp(8px, 1.8vw, 12px);
+  background: #2a2f3a;
+  border: 2px solid #0a0e15;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.bs-hp-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #7ef78b, #2fbf4f);
+  transition: width 0.25s steps(6);
+}
+
+.bs-hp-fill.right {
+  margin-left: auto;
+}
+
+.bs-round-label {
+  color: #f0c45d;
+  font-size: clamp(0.7rem, 2.2vw, 0.95rem);
+  text-shadow: 2px 2px 0 #000;
+  white-space: nowrap;
+}
+
+/* ---- ファイター -------------------------------------------------------- */
+
+.bs-fighters {
+  position: absolute;
+  inset: auto 0 8% 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  z-index: 3;
+  height: 62%;
+}
+
+.bs-fighter {
+  position: absolute;
+  bottom: 0;
+  width: 32%;
+  height: 100%;
+  --bs-recoil: -7%;
+  --bs-dodge: -5%;
+}
+.bs-fighter.left { left: 20%; }
+.bs-fighter.right { right: 20%; --bs-recoil: 7%; --bs-dodge: 5%; }
+
+.bs-arena[data-bs-corner="right"] .bs-fighter.right { right: 6%; }
+.bs-arena[data-bs-corner="right"] .bs-fighter.left { left: 38%; }
+.bs-arena[data-bs-corner="left"] .bs-fighter.left { left: 6%; }
+.bs-arena[data-bs-corner="left"] .bs-fighter.right { right: 38%; }
+.bs-arena[data-bs-corner] .bs-fighters { bottom: 14%; }
+.bs-arena[data-bs-corner="left"] .bs-corner-bg { transform: scaleX(-1); }
+
+.bs-fighter.right {
+  transform: scaleX(-1);
+  transform-origin: bottom center;
+}
+
+.bs-fighter-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: scale(var(--bs-scale, 1));
+  transform-origin: bottom center;
+}
+
+.bs-sprite {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5));
+}
+
+.bs-sprite-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transform-origin: bottom center;
+}
+
+/* ---- 色替えシルエット（スプライト未定義キャラの代替） ------------------- */
+
+.bs-silhouette {
+  position: relative;
+  width: 52%;
+  height: 86%;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.5));
+}
+
+.bs-silhouette span {
+  position: absolute;
+  background: var(--bs-theme, #8a97ab);
+  border: 3px solid #0a0e15;
+  box-sizing: border-box;
+}
+
+.bs-sil-head {
+  width: 34%;
+  height: 24%;
+  left: 33%;
+  top: 0;
+  border-radius: 20% 20% 30% 30%;
+}
+
+.bs-sil-body {
+  width: 46%;
+  height: 40%;
+  left: 27%;
+  top: 22%;
+  border-radius: 18% 18% 24% 24%;
+  filter: brightness(0.92);
+}
+
+.bs-sil-arm {
+  width: 14%;
+  height: 26%;
+  top: 26%;
+  border-radius: 40%;
+}
+
+.bs-sil-arm.front { right: 12%; transform: rotate(-18deg); }
+.bs-sil-arm.back { left: 12%; transform: rotate(14deg); filter: brightness(0.8); }
+
+.bs-sil-glove {
+  width: 18%;
+  height: 12%;
+  top: 44%;
+  border-radius: 46%;
+  filter: brightness(1.25);
+}
+
+.bs-sil-glove.front { right: 8%; }
+.bs-sil-glove.back { left: 8%; filter: brightness(0.9); }
+
+.bs-sil-leg {
+  width: 16%;
+  height: 34%;
+  top: 60%;
+  border-radius: 24%;
+  filter: brightness(0.85);
+}
+
+.bs-sil-leg.front { left: 30%; }
+.bs-sil-leg.back { left: 52%; }
+
+/* シルエットの簡易ポーズ差分 */
+.bs-sil-pose-jab .bs-sil-glove.front,
+.bs-sil-pose-straight .bs-sil-glove.front { transform: translate(46%, -60%) scale(1.15); }
+.bs-sil-pose-jab .bs-sil-arm.front,
+.bs-sil-pose-straight .bs-sil-arm.front { transform: rotate(-64deg) translateY(-16%); }
+.bs-sil-pose-body .bs-sil-glove.front { transform: translate(40%, 24%); }
+.bs-sil-pose-body .bs-sil-arm.front { transform: rotate(-30deg) translateY(6%); }
+.bs-sil-pose-damage_face,
+.bs-sil-pose-damage_body { transform: rotate(8deg) translateX(6%); }
+.bs-sil-pose-down { transform: rotate(78deg) translate(18%, 34%); }
+.bs-sil-pose-win .bs-sil-glove.front { transform: translate(10%, -140%); }
+.bs-sil-pose-win .bs-sil-arm.front { transform: rotate(-150deg) translateY(-30%); }
+
+/* ---- スプライト不足時のCSS代替（被弾フラッシュ・転倒） ------------------ */
+
+.bs-sub-damage .bs-sprite,
+.bs-sub-damage .bs-silhouette {
+  animation: bs-flash 0.32s ease-out;
+}
+
+.bs-sub-down .bs-sprite,
+.bs-sub-down .bs-silhouette {
+  transform: rotate(78deg) translate(14%, 26%);
+  transition: transform 0.28s ease-in;
+  filter: saturate(0.6) brightness(0.8);
+}
+
+/* ---- モーション --------------------------------------------------------- */
+
+.bs-lunge { animation: bs-lunge 0.3s ease-out; }
+.bs-fighter.right.bs-lunge { animation-name: bs-lunge; } /* scaleX(-1) 済みなので同方向でよい */
+.bs-knockback { animation: bs-knockback 0.34s ease-out; }
+.bs-dodge { animation: bs-dodge 0.3s ease-out; }
+.bs-shake { animation: bs-shake 0.4s linear; }
+
+@keyframes bs-lunge {
+  0% { translate: 0 0; }
+  40% { translate: 12% 0; }
+  100% { translate: 0 0; }
+}
+
+@keyframes bs-knockback {
+  0% { translate: 0 0; }
+  40% { translate: var(--bs-recoil) 0; }
+  100% { translate: 0 0; }
+}
+
+@keyframes bs-dodge {
+  0% { translate: 0 0; }
+  40% { translate: var(--bs-dodge) -3%; }
+  100% { translate: 0 0; }
+}
+
+@keyframes bs-shake {
+  0%, 100% { translate: 0 0; }
+  20% { translate: -8px 4px; }
+  40% { translate: 7px -3px; }
+  60% { translate: -5px 2px; }
+  80% { translate: 3px -2px; }
+}
+
+@keyframes bs-flash {
+  0%, 100% { filter: none; }
+  30% { filter: brightness(2.4) saturate(0.4); }
+}
+
+/* ---- FX / テキスト ------------------------------------------------------ */
+
+.bs-fx-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.bs-damage {
+  position: absolute;
+  color: #ffe14d;
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
+  font-weight: bold;
+  text-shadow: 3px 3px 0 #7e1f2b, -2px -2px 0 #000;
+  animation: bs-damage-float 0.85s ease-out forwards;
+}
+
+.bs-damage.miss {
+  color: #9fb3cc;
+  font-size: clamp(0.9rem, 3.4vw, 1.4rem);
+  text-shadow: 2px 2px 0 #000;
+}
+
+@keyframes bs-damage-float {
+  0% { opacity: 0; transform: translateY(6px) scale(0.7); }
+  20% { opacity: 1; transform: translateY(0) scale(1.15); }
+  100% { opacity: 0; transform: translateY(-34px) scale(1); }
+}
+
+.bs-cutin {
+  --bs-cutin-theme: #f0c45d;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  width: min(82%, 620px);
+  min-height: clamp(78px, 15vw, 116px);
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: minmax(90px, 0.72fr) minmax(0, 1.65fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(10px, 2.5vw, 24px);
+  align-items: center;
+  padding: clamp(10px, 2.2vw, 18px) clamp(14px, 4vw, 34px);
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #fff8ee;
+  background:
+    linear-gradient(90deg, transparent 0 8%, rgba(255, 255, 255, 0.08) 8% 8.5%, transparent 8.5% 100%),
+    repeating-linear-gradient(0deg, #121722 0 12px, #18202d 12px 13px);
+  border: 4px solid var(--bs-cutin-theme);
+  box-shadow:
+    7px 7px 0 #080b11,
+    inset 0 0 0 2px rgba(255, 255, 255, 0.14);
+  clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.bs-cutin::after {
+  content: "10";
+  position: absolute;
+  right: clamp(10px, 2vw, 18px);
+  bottom: 6px;
+  color: var(--bs-cutin-theme);
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.24;
+}
+
+.bs-cutin-call {
+  grid-row: 1 / 3;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  color: #0a0e15;
+  background: var(--bs-cutin-theme);
+  border: 2px solid #fff8ee;
+  font-size: clamp(0.58rem, 1.8vw, 0.82rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.bs-cutin-call.has-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.bs-cutin-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.bs-cutin-fighter {
+  align-self: end;
+  color: #cbd3df;
+  font-size: clamp(0.7rem, 2.1vw, 0.95rem);
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.bs-cutin-move {
+  align-self: start;
+  min-width: 0;
+  overflow: hidden;
+  color: #fff;
+  font-size: clamp(1.05rem, 4.5vw, 2rem);
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  text-shadow:
+    3px 3px 0 #080b11,
+    -1px -1px 0 var(--bs-cutin-theme);
+  white-space: nowrap;
+}
+
+.bs-cutin.right {
+  text-align: right;
+  grid-template-columns: minmax(0, 1.65fr) minmax(90px, 0.72fr);
+  clip-path: polygon(0 0, 97% 0, 100% 100%, 3% 100%);
+}
+
+.bs-cutin.right .bs-cutin-call {
+  grid-column: 2;
+}
+
+.bs-cutin.right .bs-cutin-fighter,
+.bs-cutin.right .bs-cutin-move {
+  grid-column: 1;
+}
+
+.bs-cutin-in {
+  animation: bs-cutin-left-in 0.22s steps(4, end) both;
+}
+
+.bs-cutin.right.bs-cutin-in {
+  animation-name: bs-cutin-right-in;
+}
+
+.bs-cutin-out {
+  opacity: 0;
+  transition: opacity 0.12s steps(2, end);
+}
+
+@keyframes bs-cutin-left-in {
+  0% { opacity: 0; transform: translate(-82%, -50%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes bs-cutin-right-in {
+  0% { opacity: 0; transform: translate(-18%, -50%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.bs-ko {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ff4b5e;
+  font-size: clamp(3.4rem, 18vw, 8rem);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-shadow: 6px 6px 0 #0a0e15, -3px -3px 0 #fff2a7;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.bs-ko-in { animation: bs-ko-in 0.5s cubic-bezier(0.2, 2.2, 0.4, 1); }
+
+@keyframes bs-ko-in {
+  0% { transform: scale(3); opacity: 0; }
+  60% { transform: scale(0.92); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.bs-banner {
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  transform: translateX(-50%);
+  background: rgba(10, 14, 21, 0.88);
+  border: 3px solid #f0c45d;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+  color: #fff8ee;
+  padding: 10px 22px;
+  text-align: center;
+  z-index: 9;
+  white-space: nowrap;
+}
+
+.bs-banner strong {
+  display: block;
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  color: #fff2a7;
+  text-shadow: 2px 2px 0 #7e1f2b;
+}
+
+.bs-banner span {
+  display: block;
+  font-size: clamp(0.7rem, 2.4vw, 0.9rem);
+  color: #9fb3cc;
+  letter-spacing: 0.14em;
+}
+
+.bs-banner:has(.bs-winner-reaction) { width: min(88%, 32rem); bottom: 10%; box-sizing: border-box; white-space: normal; }
+.bs-winner-reaction { margin: 6px 0 0; font-size: clamp(.75rem, 2.5vw, .95rem); line-height: 1.45; color: #fff8ee; }
+
+.bs-banner-in { animation: bs-banner-in 0.4s ease-out; }
+
+@keyframes bs-banner-in {
+  0% { opacity: 0; transform: translateX(-50%) translateY(14px); }
+  100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.bs-skip-hint {
+  position: absolute;
+  right: 3%;
+  bottom: 2.5%;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: clamp(0.6rem, 2vw, 0.8rem);
+  text-shadow: 1px 1px 0 #000;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ---- レスポンシブ（幅390px想定の狭幅） ---------------------------------- */
+
+@media (max-width: 480px) {
+  .bs-hud {
+    flex-wrap: wrap;
+  }
+
+  .bs-round-label {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .bs-status {
+    max-width: 48%;
+  }
+
+  .bs-fighter { width: 38%; }
+  .bs-fighter.left { left: 15%; }
+  .bs-fighter.right { right: 15%; }
+
+  .bs-cutin {
+    top: 39%;
+    width: 94%;
+    grid-template-columns: 74px minmax(0, 1fr);
+    padding-inline: 12px;
+    border-width: 3px;
+  }
+
+  .bs-cutin.right {
+    grid-template-columns: minmax(0, 1fr) 74px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-lunge,
+  .bs-knockback,
+  .bs-dodge,
+  .bs-shake,
+  .bs-ko-in,
+  .bs-banner-in,
+  .bs-sub-damage .bs-sprite,
+  .bs-sub-damage .bs-silhouette {
+    animation: none;
+  }
+
+  .bs-hp-fill {
+    transition: none;
+  }
+
+  .bs-cutin-in,
+  .bs-cutin.right.bs-cutin-in {
+    animation: none;
+  }
+
+  .bs-cutin-out {
+    transition: none;
+  }
+}
+
+/* ---- 2026-08 夜間集中改修：着弾・開始・決着 ---------------------------- */
+.bs-arena:focus-visible {
+  outline: 3px solid #fff4b8;
+  outline-offset: -7px;
+}
+
+.bs-hit-stop .bs-fighter,
+.bs-hit-stop .bs-sprite,
+.bs-hit-stop .bs-silhouette {
+  animation-play-state: paused !important;
+}
+
+.bs-hit-stop .bs-fighters {
+  filter: contrast(1.14) brightness(1.06);
+}
+
+.bs-impact-flash {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.bs-impact-flash.left {
+  background:
+    radial-gradient(circle at var(--bs-impact-x, 28%) var(--bs-impact-y, 45%), rgba(255, 255, 255, 0.98) 0 3%, rgba(255, 221, 95, 0.78) 4% 8%, transparent 19%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.34), transparent 56%);
+}
+
+.bs-impact-flash.right {
+  background:
+    radial-gradient(circle at var(--bs-impact-x, 72%) var(--bs-impact-y, 45%), rgba(255, 255, 255, 0.98) 0 3%, rgba(255, 221, 95, 0.78) 4% 8%, transparent 19%),
+    linear-gradient(270deg, rgba(255, 255, 255, 0.34), transparent 56%);
+}
+
+.bs-impact-flash.heavy {
+  filter: saturate(1.25) contrast(1.18);
+}
+
+.bs-impact-flash-in {
+  animation: bs-impact-flash-in 85ms steps(2, end) both;
+}
+
+.bs-impact-flash.heavy.bs-impact-flash-in {
+  animation-duration: 120ms;
+}
+
+@keyframes bs-impact-flash-in {
+  0% { opacity: 0; }
+  35% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.bs-impact-burst {
+  position: absolute;
+  width: clamp(48px, 10vw, 92px);
+  aspect-ratio: 1;
+  background: #fff7cf;
+  clip-path: polygon(50% 0, 60% 35%, 88% 12%, 69% 42%, 100% 50%, 66% 60%, 88% 88%, 58% 68%, 50% 100%, 40% 67%, 12% 88%, 33% 59%, 0 50%, 34% 41%, 12% 12%, 41% 34%);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+  animation: bs-impact-burst 340ms steps(5, end) both;
+  filter: drop-shadow(0 0 8px #f6b84b);
+}
+
+.bs-impact-burst.heavy {
+  width: clamp(64px, 14vw, 126px);
+  background: #fffdf0;
+  filter: drop-shadow(0 0 7px #ff344b) drop-shadow(0 0 14px #f0c45d);
+}
+
+@keyframes bs-impact-burst {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.28) rotate(-12deg); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(1.18) rotate(4deg); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.7) rotate(12deg); }
+}
+
+.bs-round-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9;
+  width: min(86%, 720px);
+  box-sizing: border-box;
+  padding: clamp(10px, 2.4vw, 18px) clamp(20px, 5vw, 44px);
+  color: #fff8e7;
+  background:
+    linear-gradient(90deg, transparent, rgba(10, 16, 28, 0.96) 12% 88%, transparent),
+    repeating-linear-gradient(0deg, #0b1322 0 10px, #121b2c 10px 11px);
+  border-block: 4px solid #f0c45d;
+  text-align: center;
+  text-shadow: 3px 3px 0 #05080d;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.bs-round-intro span,
+.bs-round-intro strong {
+  display: block;
+}
+
+.bs-round-intro span {
+  color: #b9c3d2;
+  font-size: clamp(0.6rem, 1.8vw, 0.85rem);
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+.bs-round-intro strong {
+  color: #f0c45d;
+  font-size: clamp(2.5rem, 10vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: 0.12em;
+}
+
+.bs-round-intro-in {
+  animation: bs-round-intro-in 680ms steps(6, end) both;
+}
+
+@keyframes bs-round-intro-in {
+  0% { opacity: 0; transform: translate(-50%, -50%) scaleX(0.18); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scaleX(1.04); }
+  72% { opacity: 1; transform: translate(-50%, -50%) scaleX(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scaleX(1); }
+}
+
+.bs-arena.bs-result-left::after,
+.bs-arena.bs-result-right::after,
+.bs-arena.bs-result-draw::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  animation: bs-result-light 340ms steps(4, end) both;
+}
+
+.bs-arena.bs-result-left::after {
+  background: radial-gradient(circle at 28% 52%, transparent 0 18%, rgba(4, 8, 15, 0.18) 38%, rgba(4, 8, 15, 0.72) 88%);
+}
+
+.bs-arena.bs-result-right::after {
+  background: radial-gradient(circle at 72% 52%, transparent 0 18%, rgba(4, 8, 15, 0.18) 38%, rgba(4, 8, 15, 0.72) 88%);
+}
+
+.bs-arena.bs-result-draw::after {
+  background: linear-gradient(rgba(7, 12, 21, 0.28), rgba(7, 12, 21, 0.52));
+}
+
+.bs-result-left .bs-fighter.left,
+.bs-result-right .bs-fighter.right {
+  translate: 0 -2%;
+  filter: drop-shadow(0 0 13px rgba(240, 196, 93, 0.8));
+}
+
+.bs-result-left .bs-fighter.right,
+.bs-result-right .bs-fighter.left {
+  filter: saturate(0.52) brightness(0.58);
+}
+
+.bs-result-left .bs-status.left .bs-hp,
+.bs-result-right .bs-status.right .bs-hp {
+  border-color: #f0c45d;
+  box-shadow: 0 0 0 1px #fff4b8, 3px 3px 0 rgba(0, 0, 0, 0.55);
+}
+
+@keyframes bs-result-light {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  .bs-round-intro {
+    top: 52%;
+    width: 96%;
+    padding: 10px 14px;
+    border-block-width: 3px;
+  }
+
+  .bs-round-intro strong {
+    font-size: clamp(2rem, 13vw, 3.2rem);
+  }
+
+  .bs-impact-burst {
+    width: clamp(42px, 14vw, 64px);
+  }
+
+  .bs-impact-burst.heavy {
+    width: clamp(56px, 19vw, 86px);
+  }
+
+  .bs-result-left .bs-fighter.left,
+  .bs-result-right .bs-fighter.right {
+    translate: 0 -1%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-impact-flash-in,
+  .bs-impact-burst,
+  .bs-round-intro-in,
+  .bs-arena.bs-result-left::after,
+  .bs-arena.bs-result-right::after,
+  .bs-arena.bs-result-draw::after,
+  .bs-damage {
+    animation: none;
+  }
+
+  .bs-impact-flash,
+  .bs-impact-burst {
+    display: none;
+  }
+
+  .bs-sub-down .bs-sprite,
+  .bs-sub-down .bs-silhouette,
+  .bs-result-left .bs-fighter,
+  .bs-result-right .bs-fighter,
+  .bs-result-draw .bs-fighter {
+    transition: none;
+  }
+
+  .bs-hit-stop .bs-fighters {
+    filter: none;
+  }
+}
+
+/* Scripted late-hit warning; ordinary result banners are unchanged. */
+.bs-banner.bs-warning {
+  background: #7b245b;
+  border-block: 4px solid #efb7d8;
+  color: #fff5da;
+}
+.bs-banner.bs-warning strong { font-size: clamp(2rem, 10vw, 4rem); }
+.bs-banner.bs-warning span { font-size: clamp(1rem, 4.5vw, 1.5rem); }
+
+/* Boss-match accents reuse the existing HUD, banner and effects layer. */
+.bs-critical .bs-hp-fill { background: #e23b4e; }
+.bs-critical .bs-name { color: #ffaca2; }
+.bs-banner.bs-beat {
+  bottom: 22%;
+  padding: 8px 12px;
+  background: rgba(9, 14, 24, 0.92);
+  border-block: 2px solid #b99451;
+}
+.bs-banner.bs-beat strong {
+  font-size: clamp(0.85rem, 3.7vw, 1.3rem);
+  line-height: 1.4;
+}
+.bs-banner.bs-beat.bs-banner-in { animation-duration: 120ms; }
+.bs-mouthpiece {
+  position: absolute;
+  width: 16px;
+  height: 10px;
+  margin: -5px -8px;
+  box-sizing: border-box;
+  border: 3px solid #fff7d8;
+  border-top: 0;
+  border-radius: 0 0 5px 5px;
+  filter: drop-shadow(1px 2px 0 #101520);
+  animation: bs-mouthpiece-flight var(--bs-mouthpiece-time, 850ms) steps(10, end) both;
+  pointer-events: none;
+}
+@keyframes bs-mouthpiece-flight {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  30% { opacity: 1; transform: translate(calc(var(--bs-mouthpiece-dx) * 0.3), -48px) rotate(150deg); }
+  60% { opacity: 1; transform: translate(calc(var(--bs-mouthpiece-dx) * 0.65), -32px) rotate(300deg); }
+  100% { opacity: 0; transform: translate(var(--bs-mouthpiece-dx), 70px) rotate(480deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bs-mouthpiece { display: none; }
+}
+
+
+/* Only a resolved KO receives this extra time. Preserve the side-facing transform. */
+.bs-ko-stagger .bs-fighter-visual { animation: bs-ko-stagger var(--bs-ko-stagger-time, 420ms) ease-in both; }
+.bs-ko-fall .bs-fighter-visual { animation: bs-ko-fall var(--bs-ko-fall-time, 480ms) ease-in both; }
+@keyframes bs-ko-stagger { from { rotate: 0deg; translate: 0 0; } to { rotate: -12deg; translate: -3% 6%; } }
+@keyframes bs-ko-fall { from { translate: 0 -8%; } to { translate: 0 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .bs-ko-stagger .bs-fighter-visual, .bs-ko-fall .bs-fighter-visual { animation: none; }
+}

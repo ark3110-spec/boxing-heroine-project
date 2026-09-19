@@ -1,0 +1,40 @@
+/* The gallery's match card uses the existing navy ring and gold trim. */
+.spectator-card { width: min(100%, 1000px); margin: 0 auto; padding: clamp(14px, 3vw, 30px); background: #182237; border: 4px solid #c7a85b; border-radius: 0; color: #fff7df; }
+.spectator-playback { color: #fff7df; }
+.spectator-card .eyebrow, .spectator-playback .eyebrow { color: #f0c45d; background: transparent; padding: 0; }
+.spectator-card button, .spectator-playback button { border-radius: 0; box-shadow: 3px 3px 0 #080d18; }
+.spectator-card .primary-btn, .spectator-playback .primary-btn { background: #cfaa53; color: #182031; }
+.spectator-card .secondary-btn, .spectator-card .back-btn, .spectator-playback .secondary-btn, .spectator-playback .back-btn { background: #253249; border: 1px solid #8a97ab; color: #fff7df; }
+.spectator-card h2, .spectator-playback h2 { margin: 0 0 12px; }
+.spectator-card header > p:last-child, .spectator-note, .spectator-playback-footer { font-family: var(--font-body); line-height: 1.65; }
+.spectator-corners { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(10px, 3vw, 26px); margin-top: 22px; }
+.spectator-corner { min-width: 0; padding: 14px; border: 2px solid #616d82; background: #101827; }
+.spectator-corner.left { border-top: 5px solid #e23b4e; }
+.spectator-corner.right { border-top: 5px solid #748bb5; }
+.spectator-corner[data-winner="true"] { box-shadow: inset 0 0 0 1px #dfbc66; }
+.spectator-card label { display: grid; gap: 8px; font-family: var(--font-body); font-weight: bold; }
+.spectator-card select { width: 100%; min-width: 0; min-height: 44px; border: 1px solid #8a97ab; border-radius: 0; padding: 8px; background: #182237; color: #fff7df; font: inherit; }
+.spectator-card select:focus-visible, .spectator-card button:focus-visible { outline: 3px solid #f0c45d; outline-offset: 3px; }
+.spectator-portrait { height: 240px; position: relative; display: grid; place-items: end center; margin-top: 10px; background: linear-gradient(0deg, #3b4663, #182237 65%); overflow: hidden; }
+.spectator-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; image-rendering: pixelated; }
+.spectator-image-fallback { align-self: center; text-align: center; padding: 12px; }
+.spectator-winner-mark { position: absolute; top: 8px; left: 8px; padding: 4px 10px; background: #f0c45d; color: #101827; font-size: .85rem; }
+.spectator-move { min-height: 2.5em; margin: 10px 0 0; font-family: var(--font-body); font-size: .9rem; line-height: 1.5; }
+.spectator-swap { margin: 12px 0 22px; text-align: center; }
+.spectator-options { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 14px; }
+.spectator-note { color: #d9dfec; font-size: .9rem; margin: 18px 0; }
+.spectator-playback { display: block; max-width: 1040px; margin-inline: auto; }
+.spectator-playback header { margin-bottom: 16px; }
+.spectator-playback-footer { text-align: center; }
+.spectator-playback-footer .footer-actions { justify-content: center; flex-wrap: wrap; gap: 12px; }
+.spectator-playback-footer button { min-height: 44px; }
+@media (max-width: 600px) {
+  .spectator-corner { padding: 8px; }
+  .spectator-corner label { font-size: .85rem; }
+  .spectator-corner select { padding: 6px 2px; font-size: .82rem; }
+  .spectator-portrait { height: 175px; }
+  .spectator-options { grid-template-columns: 1fr 1fr; }
+  .spectator-options > label:first-child { grid-column: 1 / -1; }
+  .spectator-card .footer-actions { align-items: stretch; flex-direction: column-reverse; }
+  .spectator-playback-footer .footer-actions { align-items: stretch; flex-direction: column-reverse; }
+}

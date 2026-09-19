@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sandbag",
+    "name": "サンドバッグ",
+    "description": "パワーを大きく、スタミナを少し伸ばす。コンディションを15消費。",
+    "effect": { "pow": 8, "sta": 2, "cond": -15 },
+    "responses": [{ "speaker": "コーチ", "text": "重い一発を叩き込め！" }]
+  },
+  {
+    "id": "roadwork",
+    "name": "ロードワーク",
+    "description": "スタミナを大きく、スピードを少し伸ばす。コンディションを12消費。",
+    "effect": { "sta": 8, "spd": 3, "cond": -12 },
+    "responses": [{ "speaker": "コーチ", "text": "脚から作っていくぞ。" }]
+  },
+  {
+    "id": "sparring",
+    "name": "スパーリング",
+    "description": "テクニックを大きく、スピードを少し伸ばす。コンディションを20消費。",
+    "effect": { "tec": 8, "spd": 4, "cond": -20 },
+    "responses": [{ "speaker": "コーチ", "text": "実戦で技を磨け。" }]
+  },
+  {
+    "id": "recover",
+    "name": "休養",
+    "description": "コンディションを大きく回復する。",
+    "effect": { "cond": 35 },
+    "responses": [{ "speaker": "コーチ", "text": "今日はしっかり休め。" }]
+  }
+]

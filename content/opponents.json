@@ -1,0 +1,88 @@
+{
+  "mob": {
+    "name": "新人ボクサー",
+    "portrait": "assets/characters/mob/portrait.png",
+    "thresholds": {
+      "draw": 26,
+      "win": 30,
+      "ko": 33
+    },
+    "preFight": [
+      {
+        "speaker": "",
+        "text": "第1認定戦。花冠王座への挑戦候補として、同じジムの新人ボクサーと公式戦を行う。"
+      }
+    ],
+    "resultTexts": {
+      "ko": "第1認定戦を鮮やかなKOで突破した。{heroineName}の拳に観客がどよめく。",
+      "win": "第1認定戦を判定で突破した。{heroineName}は挑戦候補としての実力を示した。",
+      "draw": "第1認定戦は引き分け。挑戦候補として認められるには、勝利が必要だ。",
+      "lose": "第1認定戦は敗北。挑戦候補として越えるべき課題が残った。"
+    }
+  },
+  "rival": {
+    "name": "宿命のライバル",
+    "portrait": "",
+    "thresholds": {
+      "draw": 38,
+      "win": 42,
+      "ko": 44
+    },
+    "preFight": [
+      {
+        "speaker": "",
+        "text": "第1認定戦を通過し、ジムの推薦枠をかけて仲間との最終認定戦へ。"
+      }
+    ],
+    "resultTexts": {
+      "ko": "最終認定戦をKOで突破。{heroineName}はジム代表として花冠王座への挑戦権をつかんだ。",
+      "win": "互いの意地がぶつかる最終認定戦を制し、{heroineName}がジムの推薦を勝ち取った。",
+      "draw": "最終認定戦は引き分け。第1認定戦の通過記録は残るが、王者への推薦にはもう一勝が必要だ。",
+      "lose": "最終認定戦は敗北。第1認定戦の通過記録は残る。ジムの推薦を得るには、この相手を越えなければならない。"
+    }
+  },
+  "champion": {
+    "name": "現チャンピオン",
+    "portrait": "assets/characters/champion/fight/stance_fatigue.png",
+    "thresholds": {
+      "draw": 44,
+      "win": 49,
+      "ko": 55,
+      "koLoss": 39
+    },
+    "preFight": [
+      {
+        "speaker": "あなた",
+        "text": "二つの認定戦を勝ち抜いた。次はジムの推薦枠で、花冠王座の現チャンピオンに挑む。"
+      }
+    ],
+    "resultTexts": {
+      "ko": "現チャンピオンをマットへ沈めた。会場に、花冠王座の新王者・{heroineFullName}の名が響き渡る。",
+      "win": "最終ラウンドまで戦い抜き、{heroineName}が判定で花冠王座を奪取した。",
+      "draw": "王者と互角に渡り合ったが、花冠王座にはあと一歩届かなかった。",
+      "lose": "王者の壁は厚かった。それでもジム代表として戦い抜いた経験は、次の拳につながる。"
+    }
+  },
+  "gyaru": {
+    "name": "ギャル挑戦者",
+    "portrait": "assets/characters/gyaru/stance_fatigue.png",
+    "thresholds": {
+      "draw": 54,
+      "win": 62,
+      "ko": 72
+    },
+    "preFight": [
+      {
+        "speaker": "ギャル挑戦者",
+        "text": "ちゃんと来たんだ、チャンピオンさん♪ じゃあ約束どおり、ウチが相手してあげる。……あの子の分まで返せるといいね？"
+      }
+    ],
+    "resultTexts": {
+      "ko": "伝説の王者を、今度はこちらがマットへ沈めた。{heroineName}は誰にも疑えない最強の座へ登りつめた。",
+      "win": "反則すれすれの伝説を、正面から判定で退けた。{heroineName}は新しい時代の象徴になった。",
+      "draw": "伝説とは決着がつかなかった。次はもっと本気で潰す、と笑う声だけがリングに残った。",
+      "lose": "伝説の強さに阻まれた。それでも、最後まで勝利を目指して戦った姿は観客の記憶に刻まれた。"
+    },
+    "alwaysKnockout": true
+  }
+}

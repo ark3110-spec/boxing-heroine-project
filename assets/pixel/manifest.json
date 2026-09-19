@@ -1,0 +1,1366 @@
+{
+  "version": 1,
+  "frameSize": 96,
+  "anchor": [
+    48,
+    88
+  ],
+  "characters": {
+    "ren": {
+      "animations": {
+        "idle": {
+          "sheet": "assets/pixel/ren_idle.png",
+          "row": 0,
+          "frames": 6,
+          "durations": [
+            210,
+            210,
+            210,
+            210,
+            210,
+            210
+          ],
+          "impactFrames": []
+        },
+        "running": {
+          "sheet": "assets/pixel/ren_running_training_v1.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110
+          ],
+          "impactFrames": [],
+          "edgeMatteColors": []
+        },
+        "punching_bag": {
+          "sheet": "assets/pixel/ren_idle.png",
+          "row": 2,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            4
+          ],
+          "matteSeeds": [
+            [],
+            [
+              [
+                42,
+                31
+              ]
+            ],
+            [],
+            [
+              [
+                41,
+                34
+              ]
+            ],
+            [
+              [
+                42,
+                37
+              ]
+            ],
+            [],
+            [],
+            []
+          ]
+        },
+        "stance": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": [],
+          "matteSeeds": [
+            [
+              [
+                36,
+                32
+              ],
+              [
+                53,
+                53
+              ],
+              [
+                60,
+                59
+              ],
+              [
+                39,
+                35
+              ]
+            ],
+            [
+              [
+                36,
+                33
+              ],
+              [
+                54,
+                54
+              ],
+              [
+                60,
+                58
+              ]
+            ],
+            [
+              [
+                37,
+                34
+              ],
+              [
+                54,
+                54
+              ],
+              [
+                59,
+                59
+              ]
+            ],
+            [
+              [
+                37,
+                33
+              ],
+              [
+                54,
+                54
+              ],
+              [
+                58,
+                58
+              ]
+            ],
+            [
+              [
+                37,
+                30
+              ],
+              [
+                54,
+                53
+              ],
+              [
+                59,
+                59
+              ],
+              [
+                40,
+                35
+              ]
+            ],
+            [
+              [
+                36,
+                31
+              ],
+              [
+                53,
+                55
+              ],
+              [
+                58,
+                57
+              ]
+            ],
+            [
+              [
+                37,
+                33
+              ],
+              [
+                54,
+                53
+              ],
+              [
+                58,
+                59
+              ]
+            ],
+            [
+              [
+                36,
+                33
+              ],
+              [
+                53,
+                54
+              ],
+              [
+                58,
+                57
+              ]
+            ]
+          ]
+        },
+        "jab": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 1,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            4
+          ],
+          "matteSeeds": [
+            [
+              [
+                36,
+                31
+              ],
+              [
+                54,
+                52
+              ],
+              [
+                39,
+                34
+              ],
+              [
+                58,
+                58
+              ]
+            ],
+            [
+              [
+                40,
+                33
+              ],
+              [
+                57,
+                52
+              ],
+              [
+                61,
+                60
+              ]
+            ],
+            [
+              [
+                39,
+                35
+              ],
+              [
+                55,
+                54
+              ],
+              [
+                60,
+                59
+              ]
+            ],
+            [
+              [
+                41,
+                35
+              ]
+            ],
+            [],
+            [
+              [
+                38,
+                37
+              ]
+            ],
+            [],
+            [
+              [
+                39,
+                34
+              ],
+              [
+                55,
+                53
+              ],
+              [
+                59,
+                60
+              ]
+            ]
+          ]
+        },
+        "straight": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 2,
+          "frames": 7,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110
+          ],
+          "impactFrames": [
+            3,
+            4
+          ],
+          "matteSeeds": [
+            [
+              [
+                39,
+                33
+              ]
+            ],
+            [],
+            [
+              [
+                56,
+                52
+              ],
+              [
+                58,
+                53
+              ]
+            ],
+            [
+              [
+                42,
+                34
+              ]
+            ],
+            [
+              [
+                44,
+                36
+              ],
+              [
+                39,
+                54
+              ]
+            ],
+            [
+              [
+                39,
+                32
+              ],
+              [
+                56,
+                51
+              ],
+              [
+                61,
+                55
+              ]
+            ],
+            [
+              [
+                39,
+                33
+              ],
+              [
+                55,
+                51
+              ],
+              [
+                60,
+                55
+              ]
+            ]
+          ]
+        },
+        "hook": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 3,
+          "frames": 7,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110
+          ],
+          "impactFrames": [
+            3,
+            4
+          ],
+          "matteSeeds": [
+            [
+              [
+                53,
+                53
+              ],
+              [
+                57,
+                59
+              ]
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+              [
+                56,
+                53
+              ],
+              [
+                57,
+                57
+              ],
+              [
+                55,
+                58
+              ]
+            ]
+          ]
+        },
+        "heavy_hook": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 4,
+          "frames": 7,
+          "durations": [
+            160,
+            190,
+            260,
+            70,
+            170,
+            130,
+            180
+          ],
+          "impactFrames": [
+            3,
+            4
+          ],
+          "matteSeeds": [
+            [
+              [
+                57,
+                55
+              ],
+              [
+                59,
+                60
+              ]
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+              [
+                56,
+                53
+              ]
+            ]
+          ]
+        },
+        "victory": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 5,
+          "frames": 6,
+          "durations": [
+            140,
+            130,
+            130,
+            650,
+            150,
+            160
+          ],
+          "impactFrames": [],
+          "matteSeeds": [
+            [
+              [
+                37,
+                32
+              ],
+              [
+                55,
+                53
+              ],
+              [
+                59,
+                58
+              ],
+              [
+                58,
+                64
+              ]
+            ],
+            [
+              [
+                36,
+                32
+              ],
+              [
+                54,
+                54
+              ],
+              [
+                60,
+                59
+              ]
+            ],
+            [
+              [
+                36,
+                34
+              ],
+              [
+                55,
+                53
+              ],
+              [
+                39,
+                35
+              ]
+            ],
+            [
+              [
+                57,
+                45
+              ]
+            ],
+            [
+              [
+                37,
+                33
+              ],
+              [
+                55,
+                53
+              ],
+              [
+                59,
+                60
+              ]
+            ],
+            [
+              [
+                36,
+                34
+              ],
+              [
+                55,
+                53
+              ],
+              [
+                59,
+                59
+              ]
+            ]
+          ],
+          "sourceFrames": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6
+          ]
+        },
+        "tired": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 6,
+          "frames": 7,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": [],
+          "matteSeeds": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+              [
+                36,
+                44
+              ],
+              [
+                53,
+                64
+              ],
+              [
+                59,
+                67
+              ],
+              [
+                39,
+                47
+              ]
+            ]
+          ]
+        },
+        "mitt_training": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 7,
+          "frames": 7,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110
+          ],
+          "impactFrames": [
+            2,
+            4,
+            5
+          ],
+          "matteSeeds": [
+            [
+              [
+                37,
+                37
+              ],
+              [
+                54,
+                56
+              ],
+              [
+                60,
+                61
+              ]
+            ],
+            [
+              [
+                59,
+                56
+              ],
+              [
+                61,
+                61
+              ]
+            ],
+            [
+              [
+                38,
+                39
+              ],
+              [
+                56,
+                51
+              ],
+              [
+                57,
+                60
+              ]
+            ],
+            [
+              [
+                37,
+                38
+              ],
+              [
+                54,
+                56
+              ],
+              [
+                59,
+                60
+              ],
+              [
+                39,
+                47
+              ]
+            ],
+            [],
+            [],
+            [
+              [
+                37,
+                38
+              ],
+              [
+                54,
+                57
+              ],
+              [
+                59,
+                62
+              ]
+            ]
+          ]
+        },
+        "revenge_rise": {
+          "sheet": "assets/pixel/ren_stance.png",
+          "row": 6,
+          "frames": 4,
+          "durations": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "sourceFrames": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "impactFrames": [],
+          "matteSeeds": [
+            [],
+            [],
+            [],
+            [
+              [
+                36,
+                44
+              ],
+              [
+                53,
+                64
+              ],
+              [
+                59,
+                67
+              ],
+              [
+                39,
+                47
+              ]
+            ]
+          ]
+        }
+      },
+      "name": "紅 蓮華",
+      "training": {
+        "sandbag": [
+          "punching_bag",
+          "straight",
+          "heavy_hook"
+        ],
+        "roadwork": [
+          "running"
+        ],
+        "sparring": [
+          "jab",
+          "hook",
+          "mitt_training"
+        ],
+        "recover": [
+          "tired"
+        ]
+      },
+      "edgeMatteColors": [
+        [
+          244,
+          238,
+          227
+        ],
+        [
+          232,
+          207,
+          187
+        ]
+      ],
+      "edgeInk": [
+        8,
+        1,
+        3
+      ]
+    },
+    "tsubaki": {
+      "animations": {
+        "idle": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 0,
+          "frames": 6,
+          "durations": [
+            210,
+            210,
+            210,
+            210,
+            210,
+            210
+          ],
+          "impactFrames": []
+        },
+        "stance": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 1,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": []
+        },
+        "running": {
+          "sheet": "assets/pixel/tsubaki_running_training_v1.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110
+          ],
+          "impactFrames": [],
+          "edgeMatteColors": []
+        },
+        "victory": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 3,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": []
+        },
+        "tired": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 4,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": []
+        },
+        "mitt_training": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 5,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            2,
+            4,
+            5
+          ]
+        },
+        "guard": {
+          "sheet": "assets/pixel/tsubaki_guard.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": []
+        },
+        "dodge": {
+          "sheet": "assets/pixel/tsubaki_guard.png",
+          "row": 1,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": []
+        },
+        "counter_straight": {
+          "sheet": "assets/pixel/tsubaki_guard.png",
+          "row": 2,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            4
+          ]
+        },
+        "counter_hook": {
+          "sheet": "assets/pixel/tsubaki_guard.png",
+          "row": 3,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            4
+          ]
+        },
+        "sparring": {
+          "sheet": "assets/pixel/tsubaki_guard.png",
+          "row": 4,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            5
+          ]
+        },
+        "revenge_rise": {
+          "sheet": "assets/pixel/tsubaki_idle.png",
+          "row": 4,
+          "frames": 4,
+          "durations": [
+            140,
+            140,
+            140,
+            140
+          ],
+          "sourceFrames": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "impactFrames": []
+        }
+      },
+      "name": "氷室 椿",
+      "training": {
+        "sandbag": [
+          "mitt_training",
+          "counter_straight",
+          "counter_hook"
+        ],
+        "roadwork": [
+          "running"
+        ],
+        "sparring": [
+          "guard",
+          "dodge",
+          "sparring"
+        ],
+        "recover": [
+          "tired"
+        ]
+      },
+      "edgeMatteColors": [
+        [
+          253,
+          251,
+          240
+        ],
+        [
+          245,
+          239,
+          222
+        ]
+      ],
+      "edgeInk": [
+        1,
+        2,
+        14
+      ]
+    },
+    "amane": {
+      "animations": {
+        "idle": {
+          "sheet": "assets/pixel/amane_idle.png",
+          "row": 0,
+          "frames": 6,
+          "durations": [
+            210,
+            210,
+            210,
+            210,
+            210,
+            210
+          ],
+          "impactFrames": []
+        },
+        "stance": {
+          "sheet": "assets/pixel/amane_idle.png",
+          "row": 1,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": []
+        },
+        "running": {
+          "sheet": "assets/pixel/amane_running_training_v1.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110,
+            110
+          ],
+          "impactFrames": [],
+          "edgeMatteColors": []
+        },
+        "victory": {
+          "sheet": "assets/pixel/amane_victory_jump_v1.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            260,
+            150,
+            95,
+            160,
+            150,
+            100,
+            130,
+            220
+          ],
+          "impactFrames": [],
+          "yOffsets": [
+            0,
+            0,
+            -3,
+            -15,
+            -15,
+            -3,
+            0,
+            0
+          ],
+          "edgeMatteColors": []
+        },
+        "tired": {
+          "sheet": "assets/pixel/amane_idle.png",
+          "row": 4,
+          "frames": 8,
+          "durations": [
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180,
+            180
+          ],
+          "impactFrames": []
+        },
+        "mitt_training": {
+          "sheet": "assets/pixel/amane_idle.png",
+          "row": 5,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            2,
+            4,
+            5
+          ]
+        },
+        "quick_jab": {
+          "sheet": "assets/pixel/amane_quick_jab.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            110,
+            110,
+            130,
+            60,
+            90,
+            90,
+            100,
+            160
+          ],
+          "impactFrames": [
+            3,
+            4
+          ]
+        },
+        "rapid_combination": {
+          "sheet": "assets/pixel/amane_quick_jab.png",
+          "row": 1,
+          "frames": 8,
+          "durations": [
+            110,
+            110,
+            130,
+            60,
+            90,
+            90,
+            100,
+            160
+          ],
+          "impactFrames": [
+            3,
+            4,
+            5
+          ]
+        },
+        "body_blow": {
+          "sheet": "assets/pixel/amane_uppercut.png",
+          "row": 2,
+          "frames": 7,
+          "durations": [
+            150,
+            170,
+            200,
+            70,
+            160,
+            110,
+            170
+          ],
+          "impactFrames": [
+            3,
+            4
+          ]
+        },
+        "uppercut": {
+          "sheet": "assets/pixel/amane_uppercut.png",
+          "row": 0,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            230,
+            70,
+            120,
+            180,
+            100,
+            160
+          ],
+          "impactFrames": [
+            4
+          ]
+        },
+        "punching_bag": {
+          "sheet": "assets/pixel/amane_quick_jab.png",
+          "row": 4,
+          "frames": 8,
+          "durations": [
+            150,
+            170,
+            210,
+            60,
+            120,
+            170,
+            110,
+            150
+          ],
+          "impactFrames": [
+            3,
+            4
+          ]
+        },
+        "revenge_rise": {
+          "sheet": "assets/pixel/amane_idle.png",
+          "row": 4,
+          "frames": 5,
+          "durations": [
+            140,
+            140,
+            140,
+            140,
+            140
+          ],
+          "sourceFrames": [
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "impactFrames": []
+        }
+      },
+      "name": "因幡 甘音",
+      "training": {
+        "sandbag": [
+          "punching_bag",
+          "body_blow",
+          "uppercut"
+        ],
+        "roadwork": [
+          "running"
+        ],
+        "sparring": [
+          "quick_jab",
+          "rapid_combination",
+          "mitt_training"
+        ],
+        "recover": [
+          "tired"
+        ]
+      },
+      "edgeMatteColors": [
+        [
+          253,
+          252,
+          248
+        ],
+        [
+          228,
+          226,
+          223
+        ]
+      ],
+      "edgeInk": [
+        2,
+        3,
+        6
+      ]
+    }
+  },
+  "backgrounds": {
+    "gym": "assets/pixel/gym.png",
+    "street": "assets/pixel/street.png",
+    "riverside": "assets/pixel/riverside.png",
+    "arena": "assets/pixel/arena.png"
+  },
+  "props": {
+    "bag": {
+      "src": "assets/pixel/prop_bag.png",
+      "width": 38,
+      "height": 110
+    },
+    "mitts": {
+      "src": "assets/pixel/prop_mitts.png",
+      "width": 32,
+      "height": 30
+    },
+    "bench": {
+      "src": "assets/pixel/prop_bench.png",
+      "width": 64,
+      "height": 24
+    },
+    "bottle": {
+      "src": "assets/pixel/prop_bottle.png",
+      "width": 12,
+      "height": 25
+    },
+    "towel": {
+      "src": "assets/pixel/prop_towel.png",
+      "width": 24,
+      "height": 14
+    },
+    "gloves": {
+      "src": "assets/pixel/prop_gloves.png",
+      "width": 26,
+      "height": 28
+    },
+    "gong": {
+      "src": "assets/pixel/prop_gong.png",
+      "width": 28,
+      "height": 28
+    },
+    "impact": {
+      "src": "assets/pixel/prop_impact.png",
+      "width": 32,
+      "height": 32
+    }
+  }
+}

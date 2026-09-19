@@ -1,0 +1,7 @@
+{
+  "bgm": { "title": "title", "training": "training", "battle": "battle" },
+  "se": {
+    "uiConfirm": "uiConfirm", "uiBack": "uiBack", "training": "training",
+    "bell": "bell", "hit": "hit", "ko": "ko", "result": "result", "unlock": "unlock"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "version": 1,
+  "canvas": {
+    "width": 192,
+    "height": 320,
+    "previewScale": 4,
+    "alphaRule": "binary_0_255",
+    "paletteLimit": 48
+  },
+  "characters": {
+    "ren": {
+      "defaultOutfit": "boxing_basic",
+      "outfits": {
+        "boxing_basic": {
+          "defaultExpression": "neutral",
+          "defaultPose": "basic_standing",
+          "sprites": {
+            "neutral.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__neutral__basic_standing__c003.png",
+              "expression": "neutral",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            },
+            "wilted.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__wilted__basic_standing__c005.png",
+              "expression": "wilted",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            },
+            "angry.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__angry__basic_standing__c006.png",
+              "expression": "angry",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            },
+            "blush.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__blush__basic_standing__c007.png",
+              "expression": "blush",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            },
+            "teary.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__teary__basic_standing__c008.png",
+              "expression": "teary",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            },
+            "soft_smile.basic_standing": {
+              "src": "assets/characters/ren/boxing_basic/ren__boxing_basic__soft_smile__basic_standing__c009.png",
+              "expression": "soft_smile",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 41,
+              "bbox": [
+                8,
+                9,
+                183,
+                320
+              ]
+            }
+          }
+        }
+      }
+    },
+    "tsubaki": {
+      "defaultOutfit": "boxing_basic",
+      "outfits": {
+        "boxing_basic": {
+          "defaultExpression": "neutral",
+          "defaultPose": "slight_three_quarter_standing",
+          "sprites": {
+            "neutral.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__neutral__slight_three_quarter_standing__c002.png",
+              "expression": "neutral",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            },
+            "wilted.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__wilted__slight_three_quarter_standing__c003.png",
+              "expression": "wilted",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 40,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            },
+            "angry.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__angry__slight_three_quarter_standing__c004.png",
+              "expression": "angry",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 35,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            },
+            "blush.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__blush__slight_three_quarter_standing__c005.png",
+              "expression": "blush",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 42,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            },
+            "teary.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__teary__slight_three_quarter_standing__c006.png",
+              "expression": "teary",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 38,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            },
+            "soft_smile.slight_three_quarter_standing": {
+              "src": "assets/characters/tsubaki/boxing_basic/tsubaki__boxing_basic__soft_smile__slight_three_quarter_standing__c007.png",
+              "expression": "soft_smile",
+              "pose": "slight_three_quarter_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 36,
+              "bbox": [
+                23,
+                9,
+                168,
+                320
+              ]
+            }
+          }
+        }
+      }
+    },
+    "amane": {
+      "defaultOutfit": "boxing_basic",
+      "outfits": {
+        "boxing_basic": {
+          "defaultExpression": "neutral",
+          "defaultPose": "basic_standing",
+          "sprites": {
+            "neutral.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__neutral__basic_standing__c003.png",
+              "expression": "neutral",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 47,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            },
+            "wilted.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__wilted__basic_standing__c004.png",
+              "expression": "wilted",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 41,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            },
+            "angry.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__angry__basic_standing__c005.png",
+              "expression": "angry",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 41,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            },
+            "blush.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__blush__basic_standing__c006.png",
+              "expression": "blush",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 43,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            },
+            "teary.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__teary__basic_standing__c007.png",
+              "expression": "teary",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 42,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            },
+            "soft_smile.basic_standing": {
+              "src": "assets/characters/amane/boxing_basic/amane__boxing_basic__soft_smile__basic_standing__c008.png",
+              "expression": "soft_smile",
+              "pose": "basic_standing",
+              "width": 192,
+              "height": 320,
+              "paletteColors": 40,
+              "bbox": [
+                32,
+                9,
+                159,
+                320
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

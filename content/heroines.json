@@ -1,0 +1,2310 @@
+{
+  "ren": {
+    "name": "紅 蓮華",
+    "type": "パワー",
+    "copy": "一撃で流れを変えるパワーファイター。",
+    "profile": {
+      "hp": 100,
+      "attack": 72,
+      "defense": 48
+    },
+    "portrait": "assets/characters/ren/portrait.png",
+    "trainingImage": "assets/characters/ren/training.png",
+    "themeClass": "ren",
+    "specialtyCommandId": "sandbag",
+    "initialStats": {
+      "pow": 35,
+      "spd": 22,
+      "sta": 28,
+      "tec": 18,
+      "cond": 80
+    },
+    "moves": [
+      {
+        "id": "uppercut",
+        "name": "アッパーカット",
+        "provisionalName": false,
+        "acquiredWhen": {
+          "pow": 60,
+          "tec": 30
+        },
+        "scoreBonus": 2,
+        "koBonus": 2,
+        "paperNote": "ストレートの先に、咲かせる一撃",
+        "hint": "サンドバッグで拳を重くしながら、スパーリングも数回はさんで形を整える。",
+        "underStat": "pow"
+      }
+    ],
+    "intro": [
+      {
+        "speaker": "あなた",
+        "text": "（かつては自分も、ボクサーとしてリングに立っていた。今はコーチとして、選手を支える側だ）"
+      },
+      {
+        "speaker": "紅 蓮華",
+        "text": "は？ あんたがあたしのトレーナー？ ……まあいいわ。"
+      },
+      {
+        "speaker": "紅 蓮華",
+        "text": "言っとくけど、あたしは誰にも負けない。せいぜい足を引っ張らないでよね。"
+      },
+      {
+        "speaker": "あなた",
+        "text": "（……負けず嫌いだな。でも、目はちゃんと本気だ）"
+      },
+      {
+        "speaker": "紅 蓮華",
+        "text": "…何よ、その顔。ふん、結果で黙らせてあげる。見てなさい！",
+        "expression": "angry"
+      },
+      {
+        "speaker": "あなた",
+        "text": "望むところだ。試合は4週ごとに1つ。認定戦を二つ勝ち抜いて、ジムの代表として花冠王座を目指すぞ。"
+      }
+    ],
+    "opponentIntro": {
+      "mob": [
+        {
+          "speaker": "あなた",
+          "text": "第1認定戦の相手はジムの新人だ。まずはこの公式戦で、挑戦候補としての実力を示そう。"
+        },
+        {
+          "speaker": "紅 蓮華",
+          "text": "同じジムだからって、手加減はしないわ。まずはあたしが本物だって証明してあげる。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（同じジムなら、手の内はお互い知っている。差がつくのは、この4週間の仕上げだ）"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "あなた",
+          "text": "最終認定戦の相手、椿の資料だ。ここに勝てば、ジムの推薦で花冠王座へ挑める。"
+        },
+        {
+          "speaker": "紅 蓮華",
+          "text": "……ふん。見なくたって、あいつの顔くらい覚えてるわよ。代表の枠も、あたしが取る。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（そう言って紙を受け取る指が、少しだけ冷たい。……でも、目は逸らしていない）"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "あなた",
+          "text": "花冠王座を持つ現チャンピオンの資料だ。……数字だけ見れば、認定戦の二人とは格が違う。"
+        },
+        {
+          "speaker": "紅 蓮華",
+          "text": "……手、震えてないわよ。ちょっと、握りが強いだけ。",
+          "expression": "blush"
+        },
+        {
+          "speaker": "紅 蓮華",
+          "text": "でもね、燃えてるの。ジム代表のあたしの拳で、王座を奪ってみせるんだから。",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "あなた",
+          "text": "四週間だ。王者相手にも、お前のパンチを通せる形に仕上げるぞ。"
+        },
+        {
+          "speaker": "紅 蓮華",
+          "text": "……ふん、当たり前でしょ。あたしの拳で、あの王者を倒してやるわ。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（握りは強いままだった。……震える代わりに握ってる。昔から、そういうやつだ）"
+        }
+      ]
+    },
+    "events": [
+      {
+        "id": "ren-first-week",
+        "round": "mob",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "……ねえ。次のメニューも、あんたが決めて。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "珍しいな。「試合はあたしが決める」って言ってなかったか。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "決めるわよ、試合は。……練習は、あんたのほうが分かってるでしょ。昔から。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（言い方はきついが、預けてくれた。まずは、そこからだ）"
+          }
+        ]
+      },
+      {
+        "id": "ren-midpoint",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "はぁ…はぁ…っ、まだ、いける…！",
+            "expression": "wilted",
+            "byAction": {
+              "recover": {
+                "text": "……休んでると、つい次の試合のこと考えちゃうのよね。",
+                "expression": "neutral"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "無理はするな。少し休もう。",
+            "byAction": {
+              "recover": {
+                "text": "今は焦らなくていい。体を休めるのも準備だ。"
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……ありがと。ちょっとだけ、休む。",
+            "expression": "blush",
+            "byAction": {
+              "recover": {
+                "text": "……分かってる。あんたが見てるなら、ちゃんと休むわ。"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ren-himuro-grip",
+        "round": "rival",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "次の組み立てを考えよう。ストレートからフックへつなぐ形はどうだ。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……それも昔のやつに混ぜとくわ。まずストレート。とにかくストレートよ。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（聞いていない訳じゃない。何を渡しても、全部あのストレートの強化に変換されていく）"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "あいつには、あのストレートで勝たなきゃいけないの。あんたに貰った、あれで。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……勝ちたい、じゃなくてか。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……うるさいわね。ほら、次の試合の話、続けるわよ！"
+          }
+        ]
+      },
+      {
+        "id": "ren-himuro-tears",
+        "round": "rival",
+        "turn": 3,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "……なあ。前の氷室戦のあと。ロッカールームにいたの、知ってる。",
+            "background": "assets/gallery/events/cg_event_ren_locker_room.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……っ。",
+            "background": "assets/gallery/events/cg_event_ren_locker_room.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……見てたの。……そう。",
+            "background": "assets/gallery/events/cg_event_ren_locker_room.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "あのとき、あたし、完璧にやったつもりだった。あんたに貰ったストレート、一発も無駄にしなかった。なのに、届かなかった。",
+            "background": "assets/gallery/events/cg_event_ren_locker_room.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "だから返せてないのよ、まだ。あんたが現役の時間を割いて、あたしにくれたもの。あんなもんじゃ、全然、足りてない。",
+            "expression": "teary",
+            "background": "assets/gallery/events/cg_event_ren_locker_room.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "あれは貸しじゃない。当時のお前に一番効く武器を渡した。それだけだ。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……あんたはそう言うでしょうね。でも、あたしが決めるの。返し方も、返す量も。"
+          }
+        ]
+      },
+      {
+        "id": "ren-himuro-answer",
+        "round": "rival",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "ストレートは仕上がってる。でも、椿にはそれだけじゃ足りない。……今日は、まだ作ってない拳をやる。",
+            "byAction": {
+              "sandbag": {
+                "text": "ストレートは仕上がってる。でも、椿にはそれだけじゃ足りない。……今日は、その先の拳を説明する。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "ストレートは仕上がってる。でも、椿にはそれだけじゃ足りない。……今日は、その先の拳を説明する。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "ストレートは仕上がってる。でも、椿にはそれだけじゃ足りない。……今日は、その先の拳を説明する。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……は？　何それ。あたしのストレートに、文句あるわけ？",
+            "expression": "angry"
+          },
+          {
+            "speaker": "あなた",
+            "text": "ない。だから、その先を作る。アッパーだ。……ほら、構えろ。腰を落として、下から突き上げる。",
+            "layout": "pov",
+            "characterId": "ren",
+            "sprite": "assets/characters/ren/pov/guard.png",
+            "background": "assets/backgrounds/OP/arena.png",
+            "foreground": "assets/ui/pov/mitts_guard.png",
+            "byAction": {
+              "sandbag": {
+                "text": "ない。だから、その先を作る。アッパーだ。体は休めたままでいい。腰を落として、下から突き上げるところを想像してくれ。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "ない。だから、その先を作る。アッパーだ。体は休めたままでいい。腰を落として、下から突き上げるところを想像してくれ。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "ない。だから、その先を作る。アッパーだ。体は休めたままでいい。腰を落として、下から突き上げるところを想像してくれ。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "っ……こう？",
+            "layout": "pov",
+            "characterId": "ren",
+            "sprite": "assets/characters/ren/pov/uppercut.png",
+            "background": "assets/backgrounds/OP/arena.png",
+            "foreground": "assets/ui/pov/mitts_guard.png",
+            "byAction": {
+              "sandbag": {
+                "text": "……腰を落として、下から。すぐに打つの？",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "……腰を落として、下から。すぐに打つの？",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "……腰を落として、下から。すぐに打つの？",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "速い。速すぎる。一回ためろ。……返したい分、全部そこに乗せてこい。",
+            "layout": "pov",
+            "characterId": "ren",
+            "sprite": "assets/characters/ren/pov/guard.png",
+            "background": "assets/backgrounds/OP/arena.png",
+            "foreground": "assets/ui/pov/mitts_guard.png",
+            "byAction": {
+              "sandbag": {
+                "text": "一回ためる。……返したい分、全部そこに乗せるつもりで。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "一回ためる。……返したい分、全部そこに乗せるつもりで。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "一回ためる。……返したい分、全部そこに乗せるつもりで。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……っ、うるさい！　こう、でしょ！",
+            "layout": "pov",
+            "characterId": "ren",
+            "sprite": "assets/characters/ren/pov/uppercut.png",
+            "background": "assets/backgrounds/OP/arena.png",
+            "foreground": "assets/ui/pov/mitts_guard.png",
+            "byAction": {
+              "sandbag": {
+                "text": "……っ、うるさい！　ためてから、一気に突き上げる。そうでしょ！",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "……っ、うるさい！　ためてから、一気に突き上げる。そうでしょ！",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "……っ、うるさい！　ためてから、一気に突き上げる。そうでしょ！",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "それだ！",
+            "background": "assets/gallery/events/cg_event_ren_uppercut_mitt.png",
+            "sprite": "none",
+            "byAction": {
+              "sandbag": {
+                "text": "それだ。その順番を覚えておこう。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "それだ。その順番を覚えておこう。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "それだ。その順番を覚えておこう。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……っ！　今の……今の感触、覚えた。……ねえ、これ。あんたのじゃなくて、あたしたちのよね。",
+            "background": "assets/gallery/events/cg_event_ren_released_face.png",
+            "sprite": "none",
+            "byAction": {
+              "sandbag": {
+                "text": "……分かった。次に拳を出すとき、確かめるわ。……ねえ、これ。あんたのじゃなくて、あたしたちのよね。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "roadwork": {
+                "text": "……分かった。次に拳を出すとき、確かめるわ。……ねえ、これ。あんたのじゃなくて、あたしたちのよね。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              },
+              "recover": {
+                "text": "……分かった。次に拳を出すとき、確かめるわ。……ねえ、これ。あんたのじゃなくて、あたしたちのよね。",
+                "layout": null,
+                "foreground": null,
+                "sprite": null,
+                "background": ""
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "ren-champion-week2-common",
+        "round": "champion",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "王者の映像、今日で三本目だ。……お前のストレート、もう研究されてると思え。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "読まれてても通すのがストレートよ。……でもね。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "今のあたしには、あんたと考えてきた戦い方もあるんだから。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "なら、それをどう当てるかだ。王者相手にも通せる形にする。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……上等。あたしの拳で、あの王者を倒してやる。"
+          }
+        ]
+      },
+      {
+        "id": "ren-champion-week4",
+        "round": "champion",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "……ねえ。試合の日。セコンド、ちゃんとあんたが付くのよね。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "当たり前だ。他に誰がいる。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……別に。確認しただけ。あんたが横にいないと調子出ないとか、そういうんじゃないから。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（そういうんだ、と言ったら、ミットが飛んでくる）"
+          }
+        ]
+      },
+      {
+        "id": "ren-gyaru-week2",
+        "round": "gyaru",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "……椿、言ってた。読めてたって。読めてて、一手遅れたって。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "あたしは読まない。読む前に当てる。それしかないでしょ。",
+            "expression": "angry"
+          },
+          {
+            "speaker": "あなた",
+            "text": "それでいい。ただ、当てに行く時に手が下がる。あいつは、そこを見逃さない。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……分かってる。次は、当てに行くときも手を下げない。そこ、見ててよ。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（怒っている。でも、ただ突っ込むつもりじゃない。……それが分かるだけで、十分だ）"
+          }
+        ]
+      },
+      {
+        "id": "ren-gyaru-week4",
+        "round": "gyaru",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "……あたし、椿に勝ったとき、嬉しかったのよ。ちゃんと。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "でも今は、あいつがリングにいないのが、こんなに嫌だなんて思わなかった。",
+            "expression": "wilted"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……ああ。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "だから、あいつが戻る前に片付けとく。で、あいつの前で言うの。『次はあんたよ』って。……ほら、行くわよ！",
+            "expression": "angry"
+          }
+        ]
+      }
+    ],
+    "stageEvents": [
+      {
+        "id": "ren-after-mob",
+        "afterRound": "mob",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "第1認定戦突破くらい当然よ。……でも、あんたの指示は悪くなかった。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "こっちこそ信じてくれてありがとうな"
+          },
+          {
+            "speaker": "あなた",
+            "text": "次は最終認定戦、氷室 椿だ。今までより手強いぞ。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "望むところ。あいつを倒して、あたしがジムを代表するって認めさせる！"
+          }
+        ]
+      },
+      {
+        "id": "ren-after-rival",
+        "afterRound": "rival",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "椿に勝って、ジムの代表になれた……。次は花冠王座戦。いよいよなのよね。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "怖いか？"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "まさか。あんたとここまで来たんだもの。王者だってぶっ飛ばして、ベルトを奪うわ！"
+          }
+        ]
+      }
+    ],
+    "endings": {
+      "ko": {
+        "title": "KO勝ち",
+        "description": "紅 蓮華の一撃が相手をマットに沈めた。"
+      },
+      "win": {
+        "title": "判定勝ち",
+        "description": "紅 蓮華は最後まで試合を支配し、勝利をつかんだ。"
+      },
+      "draw": {
+        "title": "引き分け",
+        "description": "決着をつけられず、キャンペーンはここで終わった。"
+      },
+      "lose": {
+        "title": "敗北",
+        "description": "紅 蓮華は競り負けた。鍛え直して再挑戦しよう。"
+      }
+    },
+    "trainingAnimations": {
+      "sandbag": {
+        "label": "SANDBAG TRAINING",
+        "effect": "sandbag",
+        "frames": [
+          "assets/characters/ren/training/sandbag_01_ready.png",
+          "assets/characters/ren/training/sandbag_02_action.png",
+          "assets/characters/ren/training/sandbag_03_followthrough.png",
+          "assets/characters/ren/training/sandbag_04_recoil.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "roadwork": {
+        "label": "ROADWORK TRAINING",
+        "effect": "roadwork",
+        "frames": [
+          "assets/characters/ren/training/roadwork_01_ready.png",
+          "assets/characters/ren/training/roadwork_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "sparring": {
+        "label": "SPARRING TRAINING",
+        "effect": "sparring",
+        "frames": [
+          "assets/characters/ren/training/sparring_01_ready.png",
+          "assets/characters/ren/training/sparring_02_action.png",
+          "assets/characters/ren/training/sparring_03_defense.png",
+          "assets/characters/ren/training/sparring_04_return.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "recover": {
+        "label": "RECOVERY",
+        "effect": "recover",
+        "frames": [
+          "assets/characters/ren/training/recover_01_ready.png",
+          "assets/characters/ren/training/recover_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      }
+    },
+    "eventLeadIns": {
+      "sandbag": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "サンドバッグ、ここまでね。……ねえ、あんた。"
+        }
+      ],
+      "roadwork": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "走り終わったわ。息が落ち着いたら、少し話せる？"
+        }
+      ],
+      "sparring": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "スパーはここまで。……あんた、ちょっといい？"
+        }
+      ],
+      "recover": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "今日は休めたわ。……体のこと、ちゃんと見てるのね。"
+        }
+      ]
+    },
+    "victoryReactions": {
+      "mob": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "第1認定戦突破！　……ほら、あんたも喜びなさいよ。あたしたち、勝ったんだから。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ、見てた。おめでとう、蓮華。"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "……椿に勝った。あたしがジムの代表、か。……あんたと、ここまで来たのよね。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。ジムの推薦を勝ち取ったんだ。二人で喜ぼう。"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "花冠王座のチャンピオンに、勝ったのよね。……ねえ、あんた。ちゃんと見てた？"
+        },
+        {
+          "speaker": "あなた",
+          "text": "全部見てた。おめでとう、新王者。"
+        }
+      ],
+      "gyaru": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "……勝った。これで椿に、顔を上げて会えるわ。……あんたも、一緒に来なさいよ。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。一緒に伝えよう、蓮華。"
+        }
+      ],
+      "revenge": [
+        {
+          "speaker": "紅 蓮華",
+          "text": "今度は、あたしたちの勝ち！　……あんた、最後まで付き合ってくれたわね。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。もう一度挑んで、つかんだ一勝だ。"
+        }
+      ]
+    }
+  },
+  "tsubaki": {
+    "name": "氷室 椿",
+    "type": "テクニック",
+    "copy": "相手の癖を読み切る技巧派ボクサー。",
+    "profile": {
+      "hp": 92,
+      "attack": 52,
+      "defense": 68
+    },
+    "portrait": "assets/characters/tsubaki/portrait.png",
+    "trainingImage": "assets/characters/tsubaki/training.png",
+    "themeClass": "tsubaki",
+    "specialtyCommandId": "sparring",
+    "initialStats": {
+      "pow": 20,
+      "spd": 26,
+      "sta": 24,
+      "tec": 34,
+      "cond": 80
+    },
+    "moves": [
+      {
+        "id": "counter",
+        "name": "見切りカウンター",
+        "provisionalName": false,
+        "acquiredWhen": {
+          "tec": 55,
+          "spd": 40
+        },
+        "scoreBonus": 1,
+        "koBonus": 1,
+        "paperNote": "読み切って、こちらから動く",
+        "hint": "スパーリングで読みを磨きつつ、速さも一緒に乗せていく。",
+        "underStat": "tec",
+        "acquiredAfterEvent": "tsubaki-amane-answer"
+      }
+    ],
+    "intro": [
+      {
+        "speaker": "あなた",
+        "text": "（かつては自分も、ボクサーとしてリングに立っていた。今はコーチとして、選手を支える側だ）"
+      },
+      {
+        "speaker": "氷室 椿",
+        "text": "……よろしく。あなたの指示には従う。合理的なら、だけど。"
+      },
+      {
+        "speaker": "あなた",
+        "text": "（クールだ。でも、勝利への熱は隠せていない）"
+      },
+      {
+        "speaker": "あなた",
+        "text": "なら、一つずつ確かめよう。試合は4週ごとに1つ。二つの認定戦に勝てば、ジムの推薦で花冠王座へ挑める。"
+      }
+    ],
+    "opponentIntro": {
+      "mob": [
+        {
+          "speaker": "あなた",
+          "text": "第1認定戦の相手はジムの新人だ。まずはこの公式戦で、挑戦候補として実力を示そう。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……データは十分。癖も、もう三つ見えている。まずはこの認定戦を通るわ。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（同じジムの相手だ。向こうも椿を見ている。……読み合いは、もう始まっている）"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "あなた",
+          "text": "最終認定戦の相手、甘音の資料だ。ここに勝てばジム代表だが……まだデータが少ない。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……読む前に、次が来る。……正直に言うと、少し、嫌な相手ね。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（珍しく、椿の指先が紙の端を小さく折っていた）"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "椿ちゃん、いた！　……あ、おにいちゃんも。それ、最終認定戦の資料？",
+          "characterId": "amane",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "ジム代表の枠、わたしも譲らないよ。……全力で行くからね！",
+          "characterId": "amane"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……ええ。四週間、読ませてもらうわ。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "読まれる前に、走っちゃうもん！　じゃあね！",
+          "characterId": "amane",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（宣戦布告というより、挨拶だ。……なのに椿は、折った紙の端を、指で伸ばし直していた）"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "あなた",
+          "text": "花冠王座を持つ現チャンピオンの資料だ。……戦績も映像も、ひと通り揃えた。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……揃えても、勝率の計算が終わらない。変数が多すぎる。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……でも、あなたの目を足せば足りる。そう決めたでしょう。",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "あなた",
+          "text": "四週間ある。待つだけの形は捨てて、こちらから動かす形を、王者用に組み直すぞ。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "……ええ。この資料の相手は、待っていても来ない。来させる側に回る。そこまでは、計算が終わっているの。"
+        },
+        {
+          "speaker": "氷室 椿",
+          "text": "終わっていないのは、私がどこまで踏み込めるか。……それは、四週間で埋める。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（資料を持つ椿の指は、今度は紙の端を折らなかった）"
+        }
+      ]
+    },
+    "events": [
+      {
+        "id": "tsubaki-first-week",
+        "round": "mob",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……あなた。次にスパーを組むとき、相手をしてくれる？"
+          },
+          {
+            "speaker": "あなた",
+            "text": "もちろん。……珍しいな、頼み事なんて"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "合理的でしょう。私の癖を一番知っているのは、あなた。……それだけよ",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（『それだけ』の前に、少しだけ間があった）"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-midpoint",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……問題ない。心拍は管理の範囲内。続行が合理的よ。",
+            "expression": "wilted",
+            "byAction": {
+              "recover": {
+                "text": "……体調は管理の範囲内。休養の時間も、予定通りよ。",
+                "expression": "neutral"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "顔に出てるぞ。十分だけ休もう。",
+            "byAction": {
+              "recover": {
+                "text": "なら、今日はそのまま休もう。試合のことばかり考えなくてもいい。"
+              }
+            }
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "…………五分。あなたがそう言うなら、五分だけ。",
+            "expression": "blush",
+            "byAction": {
+              "recover": {
+                "text": "…………あなたがそう言うなら。少しだけ、考えるのをやめるわ。"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-amane-slip",
+        "round": "rival",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "因幡 甘音。癖が少ない、というより……読む前に次が来る。データが足りないわ。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "なら体で覚えよう。今日から俺が甘音役だ。前進圧力を止めずにかける。グローブとプロテクター、条件付きでな。",
+            "byAction": {
+              "sandbag": {
+                "text": "なら、まず動きを説明する。俺が甘音役だと考えてくれ。前進圧力を止めずにかけてくる相手を、どう止める？"
+              },
+              "roadwork": {
+                "text": "なら、まず動きを説明する。俺が甘音役だと考えてくれ。前進圧力を止めずにかけてくる相手を、どう止める？"
+              },
+              "recover": {
+                "text": "なら、まず動きを説明する。俺が甘音役だと考えてくれ。前進圧力を止めずにかけてくる相手を、どう止める？"
+              }
+            }
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……その役、あなたが受ける被弾込みでしょう。非合理よ。",
+            "byAction": {
+              "sandbag": {
+                "text": "……実際にその役をするつもり？　あなたが受ける被弾込みなら、非合理よ。"
+              },
+              "roadwork": {
+                "text": "……実際にその役をするつもり？　あなたが受ける被弾込みなら、非合理よ。"
+              },
+              "recover": {
+                "text": "……実際にその役をするつもり？　あなたが受ける被弾込みなら、非合理よ。"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "待って読むだけじゃ、あの連打は捌けない。やるぞ。",
+            "byAction": {
+              "sandbag": {
+                "text": "今日は説明だけだ。ただ、待って読むだけじゃ、あの連打は捌けない。"
+              },
+              "roadwork": {
+                "text": "今日は説明だけだ。ただ、待って読むだけじゃ、あの連打は捌けない。"
+              },
+              "recover": {
+                "text": "今日は説明だけだ。ただ、待って読むだけじゃ、あの連打は捌けない。"
+              }
+            }
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……その被弾は明日の練習効率に響く。回復も計算に入れて。……ねえ、聞いてる？　もう十分、当たってるでしょう……！",
+            "expression": "angry",
+            "byAction": {
+              "sandbag": {
+                "text": "……なら、説明だけにして。あなたが打たれるところまで想像したくない。……ねえ、聞いてる？",
+                "expression": "angry"
+              },
+              "roadwork": {
+                "text": "……なら、説明だけにして。あなたが打たれるところまで想像したくない。……ねえ、聞いてる？",
+                "expression": "angry"
+              },
+              "recover": {
+                "text": "……なら、説明だけにして。あなたが打たれるところまで想像したくない。……ねえ、聞いてる？",
+                "expression": "angry"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "（戦術の話が、少しずつ、俺の身体の話になっていく）"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-amane-clinch",
+        "round": "rival",
+        "turn": 3,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "（前へ。まだ前へ。椿が自分から動くまで——いや、その必要はなかった）",
+            "byAction": {
+              "sandbag": {
+                "text": "（体を休めたまま、前へ出てくる相手の動きを説明する。俺が「甘音役なら」と口にした、そのときだった）"
+              },
+              "roadwork": {
+                "text": "（体を休めたまま、前へ出てくる相手の動きを説明する。俺が「甘音役なら」と口にした、そのときだった）"
+              },
+              "recover": {
+                "text": "（体を休めたまま、前へ出てくる相手の動きを説明する。俺が「甘音役なら」と口にした、そのときだった）"
+              }
+            }
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "——もう、やめて！",
+            "expression": "angry",
+            "background": "assets/gallery/events/cg_event_tsubaki_arm_grab.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（読んで返すはずの椿が、自分から踏み込んで、俺を止めた。クリンチだ。……いや、これは）",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none",
+            "byAction": {
+              "sandbag": {
+                "text": "（椿が不意に身を寄せ、俺を抱き留めた。クリンチのような近さだ。……いや、これは）"
+              },
+              "roadwork": {
+                "text": "（椿が不意に身を寄せ、俺を抱き留めた。クリンチのような近さだ。……いや、これは）"
+              },
+              "recover": {
+                "text": "（椿が不意に身を寄せ、俺を抱き留めた。クリンチのような近さだ。……いや、これは）"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "（あの日、椿と閉じ込められたエレベーター。開かない扉を、俺は内側から拳で叩いた）",
+            "background": "assets/gallery/events/cg_event_tsubaki_elevator.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（そのとき傷めた拳で、俺は選手としての道を終えた。……椿は今も、あの日のことを抱えている）",
+            "background": "assets/gallery/events/cg_event_tsubaki_elevator.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "なんで……なんで、あんなことしたの……！　待っていれば、助かったかもしれないじゃない……！",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "拳を壊してまで、私なんかを助ける必要なんて……なかったのに……！",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "必要だったんだよ。あの時も、待っていたら間に合わなかった。",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "ばか……。ばか！　ばかぁ……！",
+            "expression": "teary",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（しばらく、そのままでいた。……背中に、そっと片手を添える）",
+            "background": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……それに、ほら。こうしてクリンチの練習もできた。",
+            "byAction": {
+              "sandbag": {
+                "text": "……相手を止めるには、自分から近づく手もある。クリンチの話は……今は、それだけにしておこう。"
+              },
+              "roadwork": {
+                "text": "……相手を止めるには、自分から近づく手もある。クリンチの話は……今は、それだけにしておこう。"
+              },
+              "recover": {
+                "text": "……相手を止めるには、自分から近づく手もある。クリンチの話は……今は、それだけにしておこう。"
+              }
+            }
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "…………最低の、コーチね。……今のは、合理的じゃなかったわ。私も、あなたも。"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-amane-answer",
+        "round": "rival",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "今度の甘音戦。方針を変える。待つカウンターだけじゃ足りない。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "どうする？"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "こちらから動かす。フェイントで、あの子の感情ごと引き出して——そこを打つ。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "根拠は不完全よ。データも足りない。……でも、あなたの読みも、私の判断材料に入れることにしたの。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "光栄だね。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……勝率は十分。行くわよ。",
+            "expression": "soft_smile"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-champion-week2",
+        "round": "champion",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "次にスパーを組むなら、相手は蓮華に頼むわ。あなたは、外から見て。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "俺が受けたほうが早いぞ。慣れてる。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……効率の話じゃないの。あなたの被弾は、もう計算に入れない。……入れたくないのよ。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（合理的、と言わなかった。……それが、答えだった）"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-champion-week4",
+        "round": "champion",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……昨夜、心拍が管理の範囲を出た。三十分。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "王者戦が近いからな。誰でもそうなる。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "原因は王者じゃない。……声が、耳に残っていただけ。あなたの。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……それは、どう管理するんだ。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……計算中よ。",
+            "expression": "soft_smile"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-gyaru-week2",
+        "round": "gyaru",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "勝率は下がった、と言ったわね。……上げ方は、もう決めてある。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "聞こう。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "乱入者を、私が引き出す。感情ごと。……甘音戦と同じ。ただし今度は、私の感情も乗せる。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……非合理じゃないのか。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……ええ。でも、合理的な私は、あの子を止められなかった。",
+            "expression": "teary"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-gyaru-week4",
+        "round": "gyaru",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……ねえ。あの時。あなたは、怖くなかったの。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "怖かったさ。……でも、待ってるほうが、もっと怖かった。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……そう。……なら、私も同じ答えを出すだけね。『怖い』は判断材料にならない。前に、そう言ったもの。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（判断材料にならない、と言いながら、声は少しだけ小さかった）"
+          }
+        ]
+      }
+    ],
+    "endings": {
+      "ko": {
+        "title": "KO勝ち",
+        "description": "氷室 椿は完璧な組み立てで王者を沈めた。「……計算通り。あなたとの、ね」"
+      },
+      "win": {
+        "title": "判定勝ち",
+        "description": "冷静に試合を支配し、判定勝ち。「勝因はあなたの指示。……半分は、だけど」"
+      },
+      "draw": {
+        "title": "引き分け",
+        "description": "読み切れず、キャンペーンはここで終わった。「……敗因は明確。次は、こうはならない」"
+      },
+      "lose": {
+        "title": "敗北",
+        "description": "仕上がりが足りず、競り負けた。「……私の判断ミス。あなたのせいじゃないわ」"
+      }
+    },
+    "stageEvents": [
+      {
+        "id": "tsubaki-after-mob",
+        "afterRound": "mob",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "第1認定戦、通過。……あなたの指示は概ね合理的だった。概ね、ね。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（『概ね』。椿の採点なら、それは合格点だ。……認められた、と思っていい）"
+          },
+          {
+            "speaker": "あなた",
+            "text": "次は最終認定戦、因幡 甘音。ここに勝てば、ジムの代表として花冠王座へ挑める。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "データの少ない、読みにくい相手。……いいわ。読めないなら、読めるまで観察するだけ。"
+          }
+        ]
+      },
+      {
+        "id": "tsubaki-after-rival",
+        "afterRound": "rival",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……勝った。最後まで読み切れた訳ではなかったけれど。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "これでジムの推薦を得られた。次は花冠王座戦だ。怖いか？"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "「怖い」は判断材料にならない。……ただ、私の読みとあなたの目。二つ揃えば、勝率は十分。"
+          }
+        ]
+      }
+    ],
+    "trainingAnimations": {
+      "sandbag": {
+        "label": "SANDBAG TRAINING",
+        "effect": "sandbag",
+        "frames": [
+          "assets/characters/tsubaki/training/sandbag_01_ready.png",
+          "assets/characters/tsubaki/training/sandbag_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "roadwork": {
+        "label": "ROADWORK TRAINING",
+        "effect": "roadwork",
+        "frames": [
+          "assets/characters/tsubaki/training/roadwork_01_ready.png",
+          {
+            "src": "assets/characters/tsubaki/training/roadwork_02_action.png",
+            "flipX": true
+          }
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "sparring": {
+        "label": "SPARRING TRAINING",
+        "effect": "sparring",
+        "frames": [
+          "assets/characters/tsubaki/training/sparring_01_ready.png",
+          "assets/characters/tsubaki/training/sparring_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "recover": {
+        "label": "RECOVERY",
+        "effect": "recover",
+        "frames": [
+          "assets/characters/tsubaki/training/recover_01_ready.png",
+          "assets/characters/tsubaki/training/recover_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      }
+    },
+    "eventLeadIns": {
+      "sandbag": [
+        {
+          "speaker": "氷室 椿",
+          "text": "サンドバッグは終了。……少し、話をしてもいいかしら。"
+        }
+      ],
+      "roadwork": [
+        {
+          "speaker": "氷室 椿",
+          "text": "ロードワークは終了。息を整えながら、話しましょう。"
+        }
+      ],
+      "sparring": [
+        {
+          "speaker": "氷室 椿",
+          "text": "スパーは終了。……確認しておきたいことがあるの。"
+        }
+      ],
+      "recover": [
+        {
+          "speaker": "氷室 椿",
+          "text": "今日は体を休めたわ。……話をする時間は、あるでしょう。"
+        }
+      ]
+    },
+    "victoryReactions": {
+      "mob": [
+        {
+          "speaker": "氷室 椿",
+          "text": "第1認定戦、勝利。……思っていたより、嬉しいものね。あなたに伝えるのは。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、椿。俺も嬉しいよ。"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "氷室 椿",
+          "text": "……甘音に勝った。あなたと出した答えで、ここまで来られたのね。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、椿。ジム代表の座、二人で喜ぼう。"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "氷室 椿",
+          "text": "……花冠王座、取れたのね。少し、待って。あなたの顔を見たら、実感が湧いてきた。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、椿。チャンピオンだ。"
+        }
+      ],
+      "gyaru": [
+        {
+          "speaker": "氷室 椿",
+          "text": "……勝ったわ。甘音にも、伝えなくちゃ。あなたと一緒に、ここまで来たこと。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。まずは、おめでとう。ちゃんと伝えさせてくれ。"
+        }
+      ],
+      "revenge": [
+        {
+          "speaker": "氷室 椿",
+          "text": "今度は勝利。……再挑戦を選んでよかった。あなたと、もう一度向き合えて。"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、椿。今度は二人で、勝った結果を受け止めよう。"
+        }
+      ]
+    }
+  },
+  "amane": {
+    "name": "因幡 甘音",
+    "type": "スピード",
+    "copy": "止まらない連打で押し切る前進型ボクサー。",
+    "profile": {
+      "hp": 88,
+      "attack": 58,
+      "defense": 50
+    },
+    "portrait": "assets/characters/amane/selection_cute_20260918.png",
+    "trainingImage": "assets/characters/amane/training.png",
+    "themeClass": "amane",
+    "specialtyCommandId": "roadwork",
+    "initialStats": {
+      "pow": 22,
+      "spd": 35,
+      "sta": 30,
+      "tec": 21,
+      "cond": 80
+    },
+    "moves": [
+      {
+        "id": "corner_rush",
+        "name": "コーナーラッシュ",
+        "provisionalName": false,
+        "acquiredWhen": {
+          "spd": 55,
+          "sta": 45
+        },
+        "scoreBonus": 3,
+        "koBonus": 3,
+        "paperNote": "止まらない、わたしの連打",
+        "hint": "第2戦で戦い方を教わり、ロードワークでスタミナと速さを揃える。",
+        "underStat": "spd",
+        "acquiredAfterEvent": "amane-ren-wish",
+        "acquisitionNote": "第2戦の「勝ちたい」と伝える練習イベント後"
+      }
+    ],
+    "intro": [
+      {
+        "speaker": "あなた",
+        "text": "（かつては自分も、ボクサーとしてリングに立っていた。今はコーチとして、選手を支える側だ）"
+      },
+      {
+        "speaker": "因幡 甘音",
+        "text": "わー！　おにいちゃんがトレーナーになってくれるの!?　やったー！　いっぱい練習しよ！"
+      },
+      {
+        "speaker": "あなた",
+        "text": "（この元気と速さなら、もっと上まで駆け上がれる）"
+      },
+      {
+        "speaker": "あなた",
+        "text": "最初の試合まで4週間だ。二つの認定戦に勝って、ジムのみんなに送り出してもらおう。目指すのは花冠王座だ。"
+      }
+    ],
+    "opponentIntro": {
+      "mob": [
+        {
+          "speaker": "あなた",
+          "text": "第1認定戦の相手はジムの新人だ。練習じゃなく、挑戦候補として実力を示す公式戦になる。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "あ、ジムでよく見る人だ！　……近くで見ると、おっきいね。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "……でも、足はわたしのほうが速いよね？　ね、おにいちゃん？",
+          "expression": "soft_smile"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "あなた",
+          "text": "最終認定戦の相手、蓮華の資料だ。ここを越えれば、ジムの代表として花冠王座に挑める。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "うん……。写真でも、なんか、こわい顔してる。……蓮華ちゃんに勝たなきゃ、代表にはなれないんだね。",
+          "expression": "wilted"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（紙を持つ手が、わずかに下がった。……それでも、目は蓮華の顔から離れない）"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "あなた",
+          "text": "花冠王座を持つ現チャンピオンの資料だ。みんなに認められて、今度はジムの代表として挑むんだ。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "……わたしが、ジムの代表なんだね。王者さんの写真を見たら、急にドキドキしてきた。",
+          "expression": "wilted"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "……ふー。よし。おにいちゃん、ちゃんと見ててね。",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "あなた",
+          "text": "王者は、真っ先に甘音の足を止めに来る。四週間で、その先まで走れる脚を作るぞ。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "うん。……ね、おにいちゃん。蓮華ちゃんのときの連打、王者さんにも届くかな。",
+          "expression": "wilted"
+        },
+        {
+          "speaker": "あなた",
+          "text": "今のままなら、たぶん届かない。……だから四週間ある。"
+        },
+        {
+          "speaker": "因幡 甘音",
+          "text": "……そっか。うん、そうだよね。じゃあ、いっぱい走る！　その写真、もう一回だけ見せて。",
+          "expression": "soft_smile"
+        },
+        {
+          "speaker": "あなた",
+          "text": "（紙を覗き込む顔は、もう写真にドキドキしている顔じゃなかった。走る前の顔だ）"
+        }
+      ]
+    },
+    "events": [
+      {
+        "id": "amane-first-week",
+        "round": "mob",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "おにいちゃん、あのね。……今日、ちょっとだけしんどかった。",
+            "expression": "wilted",
+            "byAction": {
+              "recover": {
+                "text": "おにいちゃん、あのね。……休んだけど、まだちょっとだるいかも。"
+              },
+              "roadwork": {
+                "text": "おにいちゃん、あのね。……今日、走るの、ちょっとだけしんどかった。"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "言ってくれて助かる。今日はもう終わりにしよう。次のメニューも、体調を見て決める。",
+            "byAction": {
+              "recover": {
+                "text": "言ってくれて助かる。今日はこのまま休もう。次のメニューも、体調を見て決める。"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……怒らない？"
+          },
+          {
+            "speaker": "あなた",
+            "text": "怒らないさ。ちゃんと言えたのが偉い"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "えへへ。じゃあ、次もちゃんと体のこと、言うね！",
+            "expression": "soft_smile"
+          }
+        ]
+      },
+      {
+        "id": "amane-midpoint",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "……ふぅ。ねえ、おにいちゃん。わたし、ちゃんとできてる？",
+            "expression": "wilted",
+            "byAction": {
+              "recover": {
+                "text": "ねえ、おにいちゃん。休むのも、ちゃんと準備になってる？",
+                "expression": "neutral"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "ああ。自分の調子をちゃんと確かめられてる。",
+            "byAction": {
+              "recover": {
+                "text": "ああ。体を休めるのも、試合へ向けた準備だ。"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "えへへ、そっかー！　じゃあ、次もちゃんと見ててね！",
+            "expression": "soft_smile"
+          }
+        ]
+      },
+      {
+        "id": "amane-ren-slip",
+        "round": "rival",
+        "turn": 3,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "（蓮華に頼んだ練習スパー。甘音は一発ごとに力んで、そのたびに読まれて、はっきり負けた）",
+            "byAction": {
+              "sandbag": {
+                "text": "（サンドバッグを終えた甘音に、蓮華が声をかけた。一発ずつ力を込める打ち方が、気になっていたらしい）"
+              },
+              "roadwork": {
+                "text": "（体を休めながら、甘音と蓮華が次の試合について話している。甘音は、一発の重さで勝負したいと言い張った）"
+              },
+              "recover": {
+                "text": "（体を休めながら、甘音と蓮華が次の試合について話している。甘音は、一発の重さで勝負したいと言い張った）"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……えへへ。まだまだだね、わたし。",
+            "byAction": {
+              "roadwork": {
+                "text": "……やっぱり、重い一発がないと、だめなのかな。"
+              },
+              "recover": {
+                "text": "……やっぱり、重い一発がないと、だめなのかな。"
+              }
+            }
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……ねえ。それ、あんたのボクシングじゃないでしょ。見てれば分かる。あんた、そんなふうに打つ選手じゃない。",
+            "byAction": {
+              "roadwork": {
+                "text": "……ねえ。それ、あんたのボクシングじゃないでしょ。あんた、そんなふうに打つ選手じゃない。"
+              },
+              "recover": {
+                "text": "……ねえ。それ、あんたのボクシングじゃないでしょ。あんた、そんなふうに打つ選手じゃない。"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "——自分だって……おにいちゃんみたいに戦えないくせに！",
+            "expression": "angry"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "な”っ……！"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……ちがう。いまの、ちがうの。……ごめんなさい……！",
+            "expression": "teary"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（甘音は返事を待たずに、駆け出していった）"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（甘音を追いかけて、ジムを飛び出す。向かった先は、河川敷だった）",
+            "secondaryCharacterId": "none",
+            "sprite": "none",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png"
+          }
+        ]
+      },
+      {
+        "id": "amane-ren-wish",
+        "round": "rival",
+        "turn": 3,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "（河川敷の階段で、甘音は膝を抱えて座っていた。少し離れた隣に、黙って座る）",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……おにいちゃん。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "うん。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "蓮華ちゃん、すごい顔してた。わたし、ひどいこと言った。……謝ったけど、あんなの、謝ったことにならないよね。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "リングの外で人を傷つけたなら、あとでちゃんと謝ればいい。それとは別に——リングに上がったら、最後に残るのは勝ったか負けたかだ。今のままなら、甘音は負ける。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "甘音は、どうしたい？",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "…………勝ちたい。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none"
+          },
+          {
+            "speaker": "あなた",
+            "text": "よし、じゃあジムに戻って練習だ。甘音の戦い方を教えてやる。",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "よし。今日は体を休めたまま、甘音の戦い方を考えよう。相手をコーナーへ追い込むところからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "よし。今日は体を休めたまま、甘音の戦い方を考えよう。相手をコーナーへ追い込むところからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "よし。今日は体を休めたまま、甘音の戦い方を考えよう。相手をコーナーへ追い込むところからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "わかった！行こう！おにいちゃん！",
+            "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "うん。ここで聞く。教えて、おにいちゃん。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "うん。ここで聞く。教えて、おにいちゃん。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "うん。ここで聞く。教えて、おにいちゃん。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "はぁ・・はぁ・・・。褒めてもらえて、うれしかったのに、消えなかったの。悔しいの。……わたし、勝ちたい。",
+            "background": "assets/gallery/events/cg_event_amane_wait_grab.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "褒めてもらえて、うれしかったのに、消えなかったの。悔しいの。……わたし、勝ちたい。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "褒めてもらえて、うれしかったのに、消えなかったの。悔しいの。……わたし、勝ちたい。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "褒めてもらえて、うれしかったのに、消えなかったの。悔しいの。……わたし、勝ちたい。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "ちゃんと言えたな。じゃあ次は戦い方を仕上げていくぞ。",
+            "background": "assets/gallery/events/cg_event_amane_wait_grab.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "ちゃんと言えたな。相手をコーナーへ追い込んだら、一発で終わらせようとせず、次のパンチへつなぐ。頭の中で、順番を追ってみよう。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "ちゃんと言えたな。相手をコーナーへ追い込んだら、一発で終わらせようとせず、次のパンチへつなぐ。頭の中で、順番を追ってみよう。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "ちゃんと言えたな。相手をコーナーへ追い込んだら、一発で終わらせようとせず、次のパンチへつなぐ。頭の中で、順番を追ってみよう。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "はぁっ！やぁっ！！",
+            "background": "assets/gallery/events/cg_event_amane_pov_rush.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "一発で止めないで、次、その次……。わたしの連打で、逃がさないんだね。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "一発で止めないで、次、その次……。わたしの連打で、逃がさないんだね。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "一発で止めないで、次、その次……。わたしの連打で、逃がさないんだね。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "そうだ！その調子だ！連打を叩き込め！",
+            "background": "assets/gallery/events/cg_event_amane_pov_rush.png",
+            "sprite": "none",
+            "byAction": {
+              "roadwork": {
+                "text": "そうだ。そのつなぎ方を覚えておこう。実際に打つのは、体を休めてからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "recover": {
+                "text": "そうだ。そのつなぎ方を覚えておこう。実際に打つのは、体を休めてからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              },
+              "sandbag": {
+                "text": "そうだ。そのつなぎ方を覚えておこう。実際に打つのは、体を休めてからだ。",
+                "background": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+                "sprite": "none"
+              }
+            }
+          }
+        ],
+        "continuesFrom": "amane-ren-slip"
+      },
+      {
+        "id": "amane-ren-sorry",
+        "round": "rival",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "蓮華ちゃん。……この前は、ごめんなさい。悔しくて、おにいちゃんまで否定されたみたいに思って。でも、だからって、あんなこと言っていいわけなかった。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……いいわ。あたしも、言い方がキツかったし。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "けど——リングの上では、最後に残るのは勝ったか負けたかだけよ。手加減はしてあげないんだからね。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……ふふっ。おにいちゃんと同じこと言うんだもん。……ちょっとだけ、ずるい。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "でも——わたしだって、負けないから！"
+          }
+        ]
+      },
+      {
+        "id": "amane-champion-week2",
+        "round": "champion",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "おにいちゃん、次に走るときは一緒に来て！　王者さん用の、ながーいやつ！",
+            "byAction": {
+              "roadwork": {
+                "text": "おにいちゃん、今日も走り終わったよ！　次は一緒に来て。王者さん用の、ながーいやつ！"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "コーチは自転車で並走だ。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "えー、ずるい！　……でも、いいや。隣にいてくれるなら、それで。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（隣にいてくれるなら、と甘音は笑う。……試合の日も、その顔を見ていたい）"
+          }
+        ]
+      },
+      {
+        "id": "amane-champion-week4",
+        "round": "champion",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "ね、おにいちゃん。王者さんに勝ったら、わたし、チャンピオンになるんだよね。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "ああ。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……そしたら、おにいちゃんは、チャンピオンのコーチだ。えへへ、なんか、すごいね。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……ちゃんと、なるからね。おにいちゃんのこと、すごいコーチにしてあげる。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（順番が逆だ、と言いかけて、やめた。……この子は本気で、そう思っている）"
+          }
+        ]
+      },
+      {
+        "id": "amane-gyaru-week2",
+        "round": "gyaru",
+        "turn": 2,
+        "lines": [
+          {
+            "speaker": "あなた",
+            "text": "（今日の甘音は、いつもの半分も走れなかった。足が、途中で何度も止まった）",
+            "byAction": {
+              "sandbag": {
+                "text": "（今日の甘音は、サンドバッグを打つ手が途中で何度も止まった）"
+              },
+              "sparring": {
+                "text": "（今日の甘音は、スパーの途中で何度も動きを止めた）"
+              },
+              "recover": {
+                "text": "（体を休めていても、甘音の表情は晴れなかった。何かを思い出したように、言葉が途切れる）"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……ごめん、おにいちゃん。あの人の顔、思い出しちゃって。蓮華ちゃんが倒れたとこも。",
+            "expression": "wilted"
+          },
+          {
+            "speaker": "あなた",
+            "text": "止まっていい。……止まった回数、数えてたか？",
+            "byAction": {
+              "recover": {
+                "text": "今日は休んでいていい。怖いと思ったことも、ここで話していいんだ。"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……えっと、四回。",
+            "byAction": {
+              "recover": {
+                "text": "……休んでても、考えちゃうの。次、ちゃんと動けるかなって。"
+              }
+            }
+          },
+          {
+            "speaker": "あなた",
+            "text": "じゃあ、次は三回を目指そう。それでいい。",
+            "byAction": {
+              "recover": {
+                "text": "次は、一度に全部できなくてもいい。一つずつ確かめよう。"
+              }
+            }
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……うん。……三回。うん、できる。",
+            "expression": "soft_smile",
+            "byAction": {
+              "recover": {
+                "text": "……うん。一つずつ。おにいちゃん、そばにいてね。"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "amane-gyaru-week4",
+        "round": "gyaru",
+        "turn": 4,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "蓮華ちゃん、言ってた。『あたしの分まで、当ててきなさい』って。……でもね、おにいちゃん。わたし、蓮華ちゃんの分は当てられないと思う。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "……そうか。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "だって、蓮華ちゃんのパンチ、わたしには打てないもん。だから、わたしの分を、いっぱい当てる。ぜんぶ、わたしの連打で。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（誰の真似でもない、と前に言った。……今度は、俺が言うまでもなかった）"
+          }
+        ]
+      }
+    ],
+    "endings": {
+      "ko": {
+        "title": "KO勝ち",
+        "description": "因幡 甘音のラッシュは、最後まで止まらなかった。「おにいちゃん、わたし、勝ったよ！」"
+      },
+      "win": {
+        "title": "判定勝ち",
+        "description": "足を止めない連打で判定勝ち。「見てた？　ぜんぶ見ててくれたよね！」"
+      },
+      "draw": {
+        "title": "引き分け",
+        "description": "あと一歩、追い切れなかった。「……ここで終わり、かぁ」"
+      },
+      "lose": {
+        "title": "敗北",
+        "description": "押し切れずに敗北。「……悔しい。……ね、おにいちゃん。わたし、ちゃんと悔しいって思えてるよ」"
+      }
+    },
+    "stageEvents": [
+      {
+        "id": "amane-after-mob",
+        "afterRound": "mob",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "第1認定戦、勝ったー！　おにいちゃん、見てた!?　ほめてほめて！"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（真っ先に俺を探した。……任せてもらえている、ということだ）"
+          },
+          {
+            "speaker": "あなた",
+            "text": "見てたよ。よく勝ち切ったな。次は最終認定戦、紅 蓮華だ。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "蓮華ちゃんかぁ……。代表の枠をかけて戦うんだよね。……でも、わたしだって負けないから！"
+          }
+        ]
+      },
+      {
+        "id": "amane-after-rival",
+        "afterRound": "rival",
+        "chance": 1,
+        "lines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "……勝てて、ジム代表になれた。ね、おにいちゃん。いまの、わたしのボクシングだったよね？"
+          },
+          {
+            "speaker": "あなた",
+            "text": "ああ。甘音が自分でつかんだ、ジムの推薦だ。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "えへへ。……次は花冠王座の王者さんだね。みんなに、勝ったよって言えるように頑張る！"
+          }
+        ]
+      }
+    ],
+    "trainingAnimations": {
+      "sandbag": {
+        "label": "SANDBAG TRAINING",
+        "effect": "sandbag",
+        "frames": [
+          "assets/characters/amane/training/sandbag_01_ready.png",
+          "assets/characters/amane/training/sandbag_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "roadwork": {
+        "label": "ROADWORK TRAINING",
+        "effect": "roadwork",
+        "frames": [
+          "assets/characters/amane/training/roadwork_01_ready.png",
+          {
+            "src": "assets/characters/amane/training/roadwork_02_action.png",
+            "flipX": true
+          }
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "sparring": {
+        "label": "SPARRING TRAINING",
+        "effect": "sparring",
+        "frames": [
+          "assets/characters/amane/training/sparring_01_ready.png",
+          "assets/characters/amane/training/sparring_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      },
+      "recover": {
+        "label": "RECOVERY",
+        "effect": "recover",
+        "frames": [
+          "assets/characters/amane/training/recover_01_ready.png",
+          "assets/characters/amane/training/recover_02_action.png"
+        ],
+        "frameMs": 350,
+        "durationMs": 1400
+      }
+    },
+    "eventLeadIns": {
+      "sandbag": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "サンドバッグ、おしまい！　ね、おにいちゃん、少しお話しよ。"
+        }
+      ],
+      "roadwork": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "走り終わったよ、おにいちゃん。息が落ち着くまで、お話ししていい？"
+        }
+      ],
+      "sparring": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "スパー、おしまい。ね、おにいちゃん、聞いてほしいことがあるの。"
+        }
+      ],
+      "recover": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "今日はゆっくり休めたよ。ね、おにいちゃん、ちょっとお話しよ。"
+        }
+      ]
+    },
+    "victoryReactions": {
+      "mob": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "第1認定戦、勝ったぁ！　おにいちゃん、わたし、認定戦で勝てたよ！　ね、一緒に喜んで！"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、甘音！　俺も嬉しいよ。"
+        }
+      ],
+      "rival": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "蓮華ちゃんに勝って、代表になれた……！　おにいちゃん、わたし、ちゃんと嬉しい！"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。甘音がつかんだ一勝だ。おめでとう。"
+        }
+      ],
+      "champion": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "おにいちゃん！　わたし、花冠王座のチャンピオンになったよ！　おにいちゃんも、チャンピオンのコーチだね！"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。おめでとう、甘音。一緒にここまで来られたな。"
+        }
+      ],
+      "gyaru": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "勝ったよ……！　おにいちゃん、蓮華ちゃんに教えてあげよ。わたしたち、勝ったよって！"
+        },
+        {
+          "speaker": "あなた",
+          "text": "ああ。一緒に伝えよう。おめでとう、甘音。"
+        }
+      ],
+      "revenge": [
+        {
+          "speaker": "因幡 甘音",
+          "text": "今度は勝ったよ、おにいちゃん！　もう一回って決めて、よかった……！"
+        },
+        {
+          "speaker": "あなた",
+          "text": "おめでとう、甘音。二人でつかみ直した一勝だな。"
+        }
+      ]
+    }
+  }
+}

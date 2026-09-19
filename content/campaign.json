@@ -1,0 +1,1092 @@
+{
+  "knockoutLossTitle": "KO負け",
+  "coachOpening": {
+    "label": "会長室",
+    "portrait": "assets/characters/chairman/chairman_neutral_candidate_20260917.png",
+    "lines": [
+      {
+        "speaker": "会長",
+        "text": "最終確認だ。今日からコーチ、ということでいいんだな。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "あなた",
+        "text": "ええ、俺が決めたことですので。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "会長",
+        "text": "地域のジムが参加する興行で、うちに「花冠王座」への挑戦枠が一つ回ってきた。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "会長",
+        "text": "送り出す選手には、同じジムの二人との認定戦に勝ってもらう。第1認定戦で実力を示し、最終認定戦で代表を決めるんだ。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "あなた",
+        "text": "仲間との二戦を通れば、ジムの推薦で王者に挑める、ということですね。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "会長",
+        "text": "そうだ。認定戦も、この興行の公式記録に残る。練習のスパーとは別だ。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "会長",
+        "text": "勝ち取った認定は、この挑戦中は保持される。負けたり引き分けたりしても、枠が残っていれば後日その試合から再挑戦できる。",
+        "sprite": "none"
+      },
+      {
+        "speaker": "会長",
+        "text": "試合は四週間ごと、再挑戦も含めて最大四試合だ。まずは、お前がコーチを務める選手をこの三人から選んでくれ。",
+        "sprite": "none"
+      }
+    ],
+    "background": "assets/backgrounds/chairman_office_20260918.png"
+  },
+  "yukitoGuide": {
+    "routeVersion": "20260917-1",
+    "title": "雪兎ちゃん攻略モード",
+    "description": "新規開始から16週の保証ルートを案内します。王者戦後の挑戦状は「受ける」を選んでね。",
+    "onRoute": "今週はこれがおすすめ！",
+    "guarantee": "この順番ならギャル戦まで大丈夫だよ。",
+    "deviationWarning": "雪兎ちゃんの保証ルートから外れます。この練習で進めると、以後の勝利は保証対象外です。",
+    "outside": "保証ルートから外れています。ここからの勝利は保証対象外です。",
+    "unverified": "この保存には手順の記録がないため、保証対象外です。保証ルートは新しく始めたプレイで使えます。",
+    "routes": {
+      "ren": [
+        "sandbag",
+        "sandbag",
+        "sandbag",
+        "sandbag",
+        "recover",
+        "sparring",
+        "sparring",
+        "recover",
+        "recover",
+        "sandbag",
+        "sparring",
+        "sparring",
+        "recover",
+        "recover",
+        "sparring",
+        "sparring"
+      ],
+      "tsubaki": [
+        "roadwork",
+        "roadwork",
+        "sparring",
+        "sparring",
+        "recover",
+        "recover",
+        "sparring",
+        "sparring",
+        "recover",
+        "sandbag",
+        "sparring",
+        "sparring",
+        "recover",
+        "recover",
+        "sandbag",
+        "sandbag"
+      ],
+      "amane": [
+        "roadwork",
+        "roadwork",
+        "roadwork",
+        "roadwork",
+        "recover",
+        "sandbag",
+        "roadwork",
+        "sparring",
+        "recover",
+        "sandbag",
+        "sparring",
+        "sparring",
+        "recover",
+        "recover",
+        "sandbag",
+        "sparring"
+      ]
+    },
+    "markerMessage": "青線と違う育て方でも大丈夫。最初からこの手順どおりに進めて、わたしを信じてくださいね♪",
+    "introduction": {
+      "title": "雪兎ちゃんからのごあいさつ",
+      "unlockEndingIds": [
+        "campaign-ren-true",
+        "campaign-ren-epilogue",
+        "campaign-tsubaki-true",
+        "campaign-tsubaki-epilogue",
+        "campaign-amane-true",
+        "campaign-amane-epilogue"
+      ],
+      "greeting": "どうもこんにちは、雪兎と申します。可愛く雪兎ちゃんと呼んでくれたらうれしいです。",
+      "lose": "とはいえ、試合は残念でしたね。あの人に勝つためのアドバイスをしにやってきました。",
+      "win": "初挑戦での勝利、おめでとうございます！　あなたには必要ないかもしれませんが、次の挑戦もお手伝いしたくてやってきました。",
+      "lines": [
+        "次に新しく始めるとき、選手選択で「雪兎ちゃん攻略モード」を選んで呼んでください。最初から手順どおりに進めて、王者戦後の挑戦状を受ければ、ギャルに勝てるルートをお教えしますね♪",
+        "あ、今まで目標にしていた青線とは違う育て方になることもあります。青線は今の能力から見た目標で、わたしは最初からの育て方をご案内するので。違って見えたらごめんなさい。けど、わたしのこと、信じてくださいね♪"
+      ]
+    }
+  },
+  "titleScreen": {
+    "eyebrow": "PIXEL BOXING TRAINING GAME",
+    "title": "ボクシングヒロイン",
+    "subtitle": "―花冠のリング―",
+    "lead": "3人のヒロインからひとりを選んで育成し、2度の公式認定戦を勝ち抜いて花冠王座へ挑もう。",
+    "image": "assets/title/title_keyvisual_amane_cute_20260918.png"
+  },
+  "playableHeroineIds": [
+    "ren",
+    "tsubaki",
+    "amane"
+  ],
+  "advanceOn": [
+    "win",
+    "ko"
+  ],
+  "schedule": {
+    "weeksPerFight": 4,
+    "maxFights": 4
+  },
+  "trainingUiText": {
+    "initialLog": "試合まで4週間。得意練習と休養を組み合わせよう。",
+    "commandRejected": {
+      "finished": "ゲームは終了しています。",
+      "forcedRest": "次のターンは強制休憩。休むのみ選択できます。"
+    },
+    "turnMessages": {
+      "immediateEnding": "{ending} に突入した。",
+      "finalEnding": "最終ターン終了。{ending} になった。",
+      "forcedRestNotice": "コンディションが限界だ。次のターンは休養しよう。"
+    },
+    "moveAcquired": "必殺技：{moveName} 取得"
+  },
+  "outcomeText": {
+    "fallbackTitles": {
+      "normal": "ノーマルエンド",
+      "good": "グッドエンド",
+      "true": "トゥルーエンド",
+      "epilogue": "エピローグ",
+      "default": "キャンペーン終了"
+    },
+    "fallbackDescription": "キャンペーンの戦績が記録された。",
+    "hiddenOffer": {
+      "title": "3戦すべてKO！ 伝説からの挑戦状",
+      "description": "新人・ライバル・現チャンピオンの3人すべてにKO勝ちしたヒロインへ、ギャル挑戦者から挑戦状が届いた。"
+    }
+  },
+  "thresholdDisplay": {
+    "normal": "win",
+    "debug": "all",
+    "modes": {
+      "hidden": [],
+      "win": [
+        "win"
+      ],
+      "all": [
+        "win",
+        "ko"
+      ]
+    }
+  },
+  "rounds": [
+    {
+      "id": "mob",
+      "opponentId": "mob",
+      "label": "第1認定戦",
+      "trainingTurns": 4
+    },
+    {
+      "id": "rival",
+      "opponentId": "rival",
+      "label": "最終認定戦",
+      "trainingTurns": 4
+    },
+    {
+      "id": "champion",
+      "opponentId": "champion",
+      "label": "花冠王座戦",
+      "trainingTurns": 4
+    }
+  ],
+  "rivalAssignments": {
+    "ren": "tsubaki",
+    "tsubaki": "amane",
+    "amane": "ren"
+  },
+  "hiddenRound": {
+    "id": "gyaru",
+    "opponentId": "gyaru",
+    "label": "隠しタイトルマッチ",
+    "trainingTurns": 4,
+    "unlock": {
+      "afterRound": "champion",
+      "requireResult": "ko",
+      "requireAllRegularResults": "ko"
+    }
+  },
+  "endingImagesByHeroine": {
+    "ren": {
+      "ko": "assets/gallery/endings/ren_match_victory.png",
+      "win": "assets/gallery/endings/ren_match_victory.png",
+      "draw": "assets/gallery/endings/ren_match_defeat.png",
+      "lose": "assets/gallery/endings/ren_match_defeat.png"
+    },
+    "tsubaki": {
+      "ko": "assets/gallery/endings/tsubaki_match_victory.png",
+      "win": "assets/gallery/endings/tsubaki_match_victory.png",
+      "draw": "assets/gallery/endings/tsubaki_match_defeat.png",
+      "lose": "assets/gallery/endings/tsubaki_match_defeat.png"
+    },
+    "amane": {
+      "ko": "assets/gallery/endings/amane_match_victory.png",
+      "win": "assets/gallery/endings/amane_match_victory.png",
+      "draw": "assets/gallery/endings/amane_match_defeat.png",
+      "lose": "assets/gallery/endings/amane_match_defeat.png"
+    }
+  },
+  "normalEndingTiers": [
+    {
+      "id": "default",
+      "minClearedRegularRounds": 0,
+      "variantKey": "normal"
+    }
+  ],
+  "endingVariants": {
+    "ren": {
+      "normal": {
+        "id": "campaign-ren-normal",
+        "title": "紅 蓮華 — ノーマルエンド",
+        "description": "限られた試合数の中で残した戦績を振り返る、紅 蓮華のシーズン記録。",
+        "closingLine": "……悔しい。ここで終わりにしたくない。あんた、次もあたしの隣にいなさいよ。",
+        "image": "assets/gallery/endings/ren_normal.png",
+        "galleryId": "campaign-ren-normal"
+      },
+      "good": {
+        "id": "campaign-ren-good",
+        "title": "紅 蓮華 — グッドエンド",
+        "description": "花冠王座の現チャンピオンを破り、新王者となった紅 蓮華の記録。",
+        "closingLine": "見た？　あたしたちで、ここまで来たのよ。……ありがと。今日は素直に言っとく。",
+        "image": "assets/gallery/endings/ren_good.png",
+        "galleryId": "campaign-ren-good"
+      },
+      "true": {
+        "id": "campaign-ren-true",
+        "title": "紅 蓮華 — トゥルーエンド",
+        "description": "現王者を越え、ギャル挑戦者との決戦にも勝利した。",
+        "closingLine": "昔のストレートも、あんたと作った新しい拳も、全部届いた。……これからも隣で見てなさいよ。",
+        "image": "assets/gallery/endings/ren_true_v2.png",
+        "galleryId": "campaign-ren-true",
+        "beforeLines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "はぁ……はぁ……。……ねえ。あんた、まだそこにいる？"
+          },
+          {
+            "speaker": "あなた",
+            "text": "いるよ。ずっと。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……そ。じゃあ、これ。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（突き出された拳は、目の前で止まったままだ。……こっちの番、ということらしい）"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……何してんのよ、早く。……それが済んだら、椿のとこ。報告、一緒に行くんだから。",
+            "expression": "blush"
+          }
+        ]
+      },
+      "epilogue": {
+        "id": "campaign-ren-epilogue",
+        "title": "紅 蓮華 — エピローグ",
+        "description": "ギャル挑戦者には届かなかった。それでも、その挑戦はリングに確かな足跡を残した。",
+        "closingLine": "……届かなかった。でも、あたしたちの拳が間違ってたなんて思わない。次はもっと強くなる。あんたも一緒によ。",
+        "image": "assets/gallery/endings/ren_epilogue.png",
+        "galleryId": "campaign-ren-epilogue"
+      }
+    },
+    "tsubaki": {
+      "normal": {
+        "id": "campaign-tsubaki-normal",
+        "title": "氷室 椿 — ノーマルエンド",
+        "description": "限られた試合数の中で残した戦績を振り返る、氷室 椿のシーズン記録。",
+        "closingLine": "……悔しい。敗因を整理して、また練習しましょう。あなたとなら、次を考えられる。",
+        "image": "assets/gallery/endings/tsubaki_normal.png",
+        "galleryId": "campaign-tsubaki-normal"
+      },
+      "good": {
+        "id": "campaign-tsubaki-good",
+        "title": "氷室 椿 — グッドエンド",
+        "description": "花冠王座の現チャンピオンを破り、新王者となった氷室 椿の記録。",
+        "closingLine": "勝因は、私の判断とあなたの指示。……二人でつかんだ王座ね。ありがとう。",
+        "image": "assets/gallery/endings/tsubaki_good.png",
+        "galleryId": "campaign-tsubaki-good"
+      },
+      "true": {
+        "id": "campaign-tsubaki-true",
+        "title": "氷室 椿 — トゥルーエンド",
+        "description": "現王者を越え、ギャル挑戦者との決戦にも勝利した。",
+        "closingLine": "待つだけじゃ届かなかった。踏み込むと決められたのは、あなたがいたから。……これからも、よろしく。",
+        "image": "assets/gallery/endings/tsubaki_true_v2.png",
+        "galleryId": "campaign-tsubaki-true",
+        "beforeLines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……はぁ。……ごめんなさい。少しの間、立てそうにないわ。"
+          },
+          {
+            "speaker": "あなた",
+            "text": "座ってろ。今日は誰も、それを非合理とは言わない。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……ふふ。……ねえ。片方だけ、外したの。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "グローブ越しだと、測れないものがあるって……もう、知っているから。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（差し出された素手は、震えていない。……ただ、待っている）"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……立てたら、甘音のところへ。あの子、見てる、って言ったから。……報告は、私からするわ。"
+          }
+        ]
+      },
+      "epilogue": {
+        "id": "campaign-tsubaki-epilogue",
+        "title": "氷室 椿 — エピローグ",
+        "description": "ギャル挑戦者には届かなかった。それでも、その挑戦はリングに確かな足跡を残した。",
+        "closingLine": "……負けた。けれど、自分から踏み込んだことは後悔していない。あなたと、次の答えを探したい。",
+        "image": "assets/gallery/endings/tsubaki_epilogue.png",
+        "galleryId": "campaign-tsubaki-epilogue"
+      }
+    },
+    "amane": {
+      "normal": {
+        "id": "campaign-amane-normal",
+        "title": "因幡 甘音 — ノーマルエンド",
+        "description": "限られた試合数の中で残した戦績を振り返る、因幡 甘音のシーズン記録。",
+        "closingLine": "……悔しい。ね、おにいちゃん。わたし、もっと強くなりたい。また一緒に練習してくれる？",
+        "image": "assets/gallery/endings/amane_normal.png",
+        "galleryId": "campaign-amane-normal"
+      },
+      "good": {
+        "id": "campaign-amane-good",
+        "title": "因幡 甘音 — グッドエンド",
+        "description": "花冠王座の現チャンピオンを破り、新王者となった因幡 甘音の記録。",
+        "closingLine": "おにいちゃん、わたし、勝ったよ！　わたしのボクシングで！　……うれしい。いっしょに喜んでほしいな。",
+        "image": "assets/gallery/endings/amane_good.png",
+        "galleryId": "campaign-amane-good"
+      },
+      "true": {
+        "id": "campaign-amane-true",
+        "title": "因幡 甘音 — トゥルーエンド",
+        "description": "現王者を越え、ギャル挑戦者との決戦にも勝利した。",
+        "closingLine": "わたしのラッシュ、最後まで届いたよ！　おにいちゃんが見ててくれて、うれしかった。……ありがとう！",
+        "image": "assets/gallery/endings/amane_true_v2.png",
+        "galleryId": "campaign-amane-true",
+        "beforeLines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "おにいちゃん——！",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（こっちへ駆けてくる。両腕を広げて、笑って、泣いて……速すぎて、止まれるのか心配になるくらいだ）"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "怖かった！　ずっと、怖かった！　……でも、行ってよかった。わたしのボクシングで、行けた。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "ああ。……蓮華に、見せに行こう。あいつ、当ててこいって言ってた。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "うん！　……あ、でも、その前に。おにいちゃん、ちょっとだけ、動かないで。"
+          }
+        ]
+      },
+      "epilogue": {
+        "id": "campaign-amane-epilogue",
+        "title": "因幡 甘音 — エピローグ",
+        "description": "ギャル挑戦者には届かなかった。それでも、その挑戦はリングに確かな足跡を残した。",
+        "closingLine": "……負けちゃった。勝ちたかったなぁ。でも、わたしのボクシングで最後まで向かっていけたよ。見ててくれて、ありがとう。",
+        "image": "assets/gallery/endings/amane_epilogue.png",
+        "galleryId": "campaign-amane-epilogue"
+      }
+    }
+  },
+  "gallery": [
+    {
+      "id": "campaign-ren-normal",
+      "stageId": "campaign",
+      "endingId": "campaign-ren-normal",
+      "title": "紅 蓮華 — ノーマル",
+      "description": "紅 蓮華のシーズン記録。",
+      "image": "assets/gallery/endings/ren_normal.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-good",
+      "stageId": "campaign",
+      "endingId": "campaign-ren-good",
+      "unlockAfterEndingIds": [
+        "campaign-ren-true"
+      ],
+      "title": "紅 蓮華 — 新チャンピオン",
+      "description": "紅 蓮華が現王者を破った記録。",
+      "image": "assets/gallery/endings/ren_good.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-normal",
+      "stageId": "campaign",
+      "endingId": "campaign-tsubaki-normal",
+      "title": "氷室 椿 — ノーマル",
+      "description": "氷室 椿のシーズン記録。",
+      "image": "assets/gallery/endings/tsubaki_normal.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-good",
+      "stageId": "campaign",
+      "endingId": "campaign-tsubaki-good",
+      "unlockAfterEndingIds": [
+        "campaign-tsubaki-true"
+      ],
+      "title": "氷室 椿 — 新チャンピオン",
+      "description": "氷室 椿が現王者を破った記録。",
+      "image": "assets/gallery/endings/tsubaki_good.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-normal",
+      "stageId": "campaign",
+      "endingId": "campaign-amane-normal",
+      "title": "因幡 甘音 — ノーマル",
+      "description": "因幡 甘音のシーズン記録。",
+      "image": "assets/gallery/endings/amane_normal.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-good",
+      "stageId": "campaign",
+      "endingId": "campaign-amane-good",
+      "unlockAfterEndingIds": [
+        "campaign-amane-true"
+      ],
+      "title": "因幡 甘音 — 新チャンピオン",
+      "description": "因幡 甘音が現王者を破った記録。",
+      "image": "assets/gallery/endings/amane_good.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-true",
+      "stageId": "campaign",
+      "endingId": "campaign-ren-true",
+      "title": "紅 蓮華 — トゥルー",
+      "description": "ギャル挑戦者を撃破した記録。",
+      "image": "assets/gallery/endings/ren_true_v2.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-epilogue",
+      "stageId": "campaign",
+      "endingId": "campaign-ren-epilogue",
+      "title": "紅 蓮華 — エピローグ",
+      "description": "隠し戦で撃破に届かなかった記録。",
+      "image": "assets/gallery/endings/ren_epilogue.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-true",
+      "stageId": "campaign",
+      "endingId": "campaign-tsubaki-true",
+      "title": "氷室 椿 — トゥルー",
+      "description": "ギャル挑戦者を撃破した記録。",
+      "image": "assets/gallery/endings/tsubaki_true_v2.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-epilogue",
+      "stageId": "campaign",
+      "endingId": "campaign-tsubaki-epilogue",
+      "title": "氷室 椿 — エピローグ",
+      "description": "隠し戦で撃破に届かなかった記録。",
+      "image": "assets/gallery/endings/tsubaki_epilogue.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-true",
+      "stageId": "campaign",
+      "endingId": "campaign-amane-true",
+      "title": "因幡 甘音 — トゥルー",
+      "description": "ギャル挑戦者を撃破した記録。",
+      "image": "assets/gallery/endings/amane_true_v2.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-epilogue",
+      "stageId": "campaign",
+      "endingId": "campaign-amane-epilogue",
+      "title": "因幡 甘音 — エピローグ",
+      "description": "隠し戦で撃破に届かなかった記録。",
+      "image": "assets/gallery/endings/amane_epilogue.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-event-locker_room",
+      "heroineId": "ren",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "紅 蓮華 — あの日のロッカールーム",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_ren_locker_room.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-event-released_face",
+      "heroineId": "ren",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "紅 蓮華 — ほどけた表情",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_ren_released_face.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-ren-event-uppercut_mitt",
+      "heroineId": "ren",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "紅 蓮華 — 二人のアッパー",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_ren_uppercut_mitt.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-event-arm_grab",
+      "heroineId": "tsubaki",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "氷室 椿 — 引き止める手",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_tsubaki_arm_grab.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-event-clinch_embrace",
+      "heroineId": "tsubaki",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "氷室 椿 — 抱き留めた理由",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_tsubaki_clinch_embrace.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-tsubaki-event-elevator",
+      "heroineId": "tsubaki",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "氷室 椿 — エレベーターの記憶",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_tsubaki_elevator.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-event-riverbank_steps",
+      "heroineId": "amane",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "因幡 甘音 — 河川敷での本音",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_amane_riverbank_steps.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-event-wait_grab",
+      "heroineId": "amane",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "因幡 甘音 — 伝えたい気持ち",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_amane_wait_grab.png",
+      "comments": []
+    },
+    {
+      "id": "campaign-amane-event-pov_rush",
+      "heroineId": "amane",
+      "stageId": "training",
+      "unlockOnView": true,
+      "title": "因幡 甘音 — つながる連打",
+      "description": "育成中の会話で見た一場面。",
+      "image": "assets/gallery/events/cg_event_amane_pov_rush.png",
+      "comments": []
+    }
+  ],
+  "hiddenIntro": {
+    "banner": "乱入！ ギャル挑戦者",
+    "paper": {
+      "image": "assets/characters/gyaru/stance_fatigue.png",
+      "name": "ギャル挑戦者",
+      "label": "CHALLENGER"
+    },
+    "doodle": "待ってるね♡",
+    "notice": "隠しタイトルマッチはリベンジできません。敗れてもエピローグとして記録されます。",
+    "choices": {
+      "accept": "挑戦状を受ける",
+      "decline": "受けない。病院へ付き添う（グッドエンド）"
+    },
+    "refereeWarning": {
+      "main": "警告！",
+      "sub": "ダウン後の攻撃"
+    },
+    "exhibitionBanner": {
+      "main": "KO",
+      "sub": ""
+    },
+    "exhibitionTitle": "乱入試合",
+    "exhibitionTempo": 1.3,
+    "gyaruLines": {
+      "entry": {
+        "speaker": "ギャル挑戦者",
+        "text": "はぁい、新チャンピオンさん♪ 3人まとめてKOって聞いて、ウチ、じっとしてらんなくなっちゃった。"
+      },
+      "acceptRival": {
+        "speaker": "ギャル挑戦者",
+        "text": "いいよ。先にあんたで、肩慣らし♪"
+      },
+      "lateHit": {
+        "speaker": "ギャル挑戦者",
+        "text": "あ、ごめーん。まだ倒れないかと思って♪"
+      },
+      "paper": {
+        "speaker": "ギャル挑戦者",
+        "text": "はい、挑戦状。待ってるね♡"
+      }
+    },
+    "byHeroine": {
+      "ren": {
+        "rivalId": "tsubaki",
+        "koDownImage": "assets/gallery/endings/tsubaki_ko_down.png",
+        "koDownFallback": "assets/gallery/endings/tsubaki_match_defeat.png",
+        "exhibition": {
+          "events": [
+            {
+              "actor": "gyaru",
+              "action": "jab",
+              "hit": false
+            },
+            {
+              "actor": "tsubaki",
+              "action": "straight",
+              "hit": true,
+              "damage": 7
+            },
+            {
+              "actor": "tsubaki",
+              "action": "straight",
+              "hit": false
+            },
+            {
+              "actor": "gyaru",
+              "action": "straight",
+              "hit": true,
+              "damage": 12,
+              "heavy": true
+            },
+            {
+              "actor": "gyaru",
+              "action": "stagger_hit",
+              "damage": 12,
+              "holdMs": 520
+            },
+            {
+              "actor": "gyaru",
+              "action": "finisher",
+              "skipCutin": true,
+              "leadMs": 140
+            }
+          ],
+          "finisher": {
+            "frames": [
+              "stance",
+              "straight"
+            ],
+            "impactFrame": "straight",
+            "frameDuration": 170,
+            "cutinImage": "assets/characters/gyaru/cutin_face.png",
+            "cutinLabel": "FINISH"
+          }
+        },
+        "rivalStepIn": {
+          "speaker": "氷室 椿",
+          "text": "……待って。乱入者のデータは、まだ誰も持っていない。先に私が取る。合理的でしょう。",
+          "characterId": "tsubaki",
+          "expression": "neutral"
+        },
+        "taunt": {
+          "speaker": "ギャル挑戦者",
+          "text": "読んでから打つとか、遅すぎ。チャンピオンさん、ウチとやろうよ。こんな雑魚とやっても楽しくないし♪"
+        },
+        "stretcher": {
+          "speaker": "あなた",
+          "text": "（担架が運ばれてくる。椿は、それでもこちらを見た）"
+        },
+        "rivalSendOff": {
+          "speaker": "氷室 椿",
+          "text": "……読めていた。読めていて、一手遅れた。……行って。データは、あなたに渡してある。",
+          "characterId": "tsubaki",
+          "expression": "teary"
+        },
+        "reaction": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "……椿を、よくも。",
+            "characterId": "ren",
+            "expression": "angry"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "ふざけないで。次はあたしよ。あんたの拳、全部止めてやる。",
+            "characterId": "ren",
+            "expression": "angry"
+          }
+        ],
+        "trainer": {
+          "speaker": "あなた",
+          "text": "決めるのはお前だ。……ただ、あいつはガードが下がった相手にも拳を止めなかった。それだけは頭に入れておけ。"
+        },
+        "accept": {
+          "speaker": "紅 蓮華",
+          "text": "分かってる。だから、あたしが止める。",
+          "characterId": "ren",
+          "expression": "neutral"
+        },
+        "decline": {
+          "speaker": "紅 蓮華",
+          "text": "……先に、椿のところに行く。あいつは、次に必ず。",
+          "characterId": "ren",
+          "expression": "wilted"
+        },
+        "beforeLines": [
+          {
+            "speaker": "紅 蓮華",
+            "text": "はぁ……っ、はぁ……。……ふふっ。ぶっ飛ばした。ほんとに、ぶっ飛ばしちゃった。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "ああ。言ったとおりだ。"
+          },
+          {
+            "speaker": "紅 蓮華",
+            "text": "……何ぼーっとしてんのよ。ほら、早く上がってきなさい。記録紙、貼り替えるんだから。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（ロープをくぐろうとした、そのときだった）"
+          }
+        ]
+      },
+      "tsubaki": {
+        "rivalId": "amane",
+        "koDownImage": "assets/gallery/endings/amane_ko_down.png",
+        "koDownFallback": "assets/gallery/endings/amane_match_defeat.png",
+        "exhibition": {
+          "events": [
+            {
+              "actor": "amane",
+              "action": "jab",
+              "hit": true,
+              "damage": 5
+            },
+            {
+              "actor": "amane",
+              "action": "jab",
+              "hit": true,
+              "damage": 5
+            },
+            {
+              "actor": "amane",
+              "action": "jab",
+              "hit": false
+            },
+            {
+              "actor": "gyaru",
+              "action": "jab",
+              "hit": true,
+              "damage": 6
+            },
+            {
+              "actor": "gyaru",
+              "action": "jab",
+              "hit": true,
+              "damage": 7,
+              "heavy": true
+            },
+            {
+              "actor": "gyaru",
+              "action": "stagger_hit",
+              "damage": 12,
+              "holdMs": 520
+            },
+            {
+              "actor": "gyaru",
+              "action": "finisher",
+              "skipCutin": true,
+              "leadMs": 140
+            }
+          ],
+          "finisher": {
+            "frames": [
+              "stance",
+              "jab",
+              "stance",
+              "jab"
+            ],
+            "impactFrame": "jab",
+            "frameDuration": 110,
+            "cutinImage": "assets/characters/gyaru/cutin_face.png",
+            "cutinLabel": "FINISH"
+          }
+        },
+        "rivalStepIn": {
+          "speaker": "因幡 甘音",
+          "text": "待って！　……わたしが先に行く。まだ、走れるもん！",
+          "characterId": "amane",
+          "expression": "neutral"
+        },
+        "taunt": {
+          "speaker": "ギャル挑戦者",
+          "text": "足が速いだけじゃ、ウチには追いつけないよ？ チャンピオンさん、ウチとやろうよ。こんな雑魚とやっても楽しくないし♪"
+        },
+        "stretcher": {
+          "speaker": "あなた",
+          "text": "（担架が運ばれてくる。甘音は、それでも笑おうとした）"
+        },
+        "rivalSendOff": {
+          "speaker": "因幡 甘音",
+          "text": "……はやかった。ぜんぜん、追いつけなかった。……椿ちゃん、行って。わたし、ちゃんと見てるから。",
+          "characterId": "amane",
+          "expression": "teary"
+        },
+        "reaction": [
+          {
+            "speaker": "氷室 椿",
+            "text": "……ガードが下がったところへ、もう一発……。",
+            "characterId": "tsubaki",
+            "expression": "angry"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "勝率は下がった。……下がっただけ。ゼロじゃない。",
+            "characterId": "tsubaki",
+            "expression": "neutral"
+          }
+        ],
+        "trainer": {
+          "speaker": "あなた",
+          "text": "決めるのはお前だ。……ただ、あいつはガードが下がった相手にも拳を止めなかった。それだけは頭に入れておけ。"
+        },
+        "accept": {
+          "speaker": "氷室 椿",
+          "text": "読み切る必要はない。動かして、打つ。……行くわ。",
+          "characterId": "tsubaki",
+          "expression": "neutral"
+        },
+        "decline": {
+          "speaker": "氷室 椿",
+          "text": "……今は受けない。検査に付き添う。それが今の最適解よ。",
+          "characterId": "tsubaki",
+          "expression": "wilted"
+        },
+        "beforeLines": [
+          {
+            "speaker": "氷室 椿",
+            "text": "…………終わった。……ねえ、勝率、十分だったでしょう。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "あなた",
+            "text": "十分どころじゃない。最後の踏み込みは、俺の目でも追えなかった。"
+          },
+          {
+            "speaker": "氷室 椿",
+            "text": "……なら、後で二人で測り直し。……今は、それより。……手、貸して。膝が、少し笑っているの。",
+            "expression": "blush"
+          },
+          {
+            "speaker": "あなた",
+            "text": "（差し出した手を、椿が取ろうとした——その時だった）"
+          }
+        ]
+      },
+      "amane": {
+        "rivalId": "ren",
+        "koDownImage": "assets/gallery/endings/ren_ko_down.png",
+        "koDownFallback": "assets/gallery/endings/ren_match_defeat.png",
+        "exhibition": {
+          "events": [
+            {
+              "actor": "ren",
+              "action": "straight",
+              "hit": true,
+              "damage": 9,
+              "heavy": true
+            },
+            {
+              "actor": "gyaru",
+              "action": "straight",
+              "hit": true,
+              "damage": 12,
+              "heavy": true
+            },
+            {
+              "actor": "ren",
+              "action": "straight",
+              "hit": false
+            },
+            {
+              "actor": "gyaru",
+              "action": "stagger_hit",
+              "damage": 12,
+              "holdMs": 520
+            },
+            {
+              "actor": "gyaru",
+              "action": "finisher",
+              "skipCutin": true,
+              "leadMs": 140
+            }
+          ],
+          "finisher": {
+            "frames": [
+              "stance",
+              "straight"
+            ],
+            "impactFrame": "straight",
+            "frameDuration": 200,
+            "cutinImage": "assets/characters/gyaru/cutin_face.png",
+            "cutinLabel": "FINISH"
+          }
+        },
+        "rivalStepIn": {
+          "speaker": "紅 蓮華",
+          "text": "待ちなさい。……その子の前に、あたしよ。パワー自慢なら、あたしが上だって証明してあげる。",
+          "characterId": "ren",
+          "expression": "angry"
+        },
+        "taunt": {
+          "speaker": "ギャル挑戦者",
+          "text": "パワー自慢って聞いてたけど、軽っ。チャンピオンさん、ウチとやろうよ。こんな雑魚とやっても楽しくないし♪"
+        },
+        "stretcher": {
+          "speaker": "あなた",
+          "text": "（担架が運ばれてくる。蓮華は、それでも顔を上げた）"
+        },
+        "rivalSendOff": {
+          "speaker": "紅 蓮華",
+          "text": "……押し負けた。あたしが。……あんた、行きなさい。あたしの分まで、当ててきなさい。",
+          "characterId": "ren",
+          "expression": "teary"
+        },
+        "reaction": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "蓮華ちゃん……！",
+            "characterId": "amane",
+            "expression": "teary"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……おにいちゃん。わたし、怖い。……でも、蓮華ちゃんをあんなふうにしたの、許せない。",
+            "characterId": "amane",
+            "expression": "teary"
+          }
+        ],
+        "trainer": {
+          "speaker": "あなた",
+          "text": "決めるのは甘音だ。……ただ、あいつはガードが下がった相手にも拳を止めなかった。それだけは覚えておいてくれ。"
+        },
+        "accept": {
+          "speaker": "因幡 甘音",
+          "text": "……行く。わたしのボクシングで、行く。",
+          "characterId": "amane",
+          "expression": "neutral"
+        },
+        "decline": {
+          "speaker": "因幡 甘音",
+          "text": "……ごめん、おにいちゃん。先に蓮華ちゃんと病院に行く。……絶対、次は逃げないから。",
+          "characterId": "amane",
+          "expression": "wilted"
+        },
+        "beforeLines": [
+          {
+            "speaker": "因幡 甘音",
+            "text": "はー……、はー……。……おにいちゃん。足、止まっちゃった。",
+            "expression": "wilted"
+          },
+          {
+            "speaker": "あなた",
+            "text": "もう止めていい。ゴングは鳴った。"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "……えへへ。そっかぁ。ぜんぶ走り切ったら、止まっていいんだ。",
+            "expression": "soft_smile"
+          },
+          {
+            "speaker": "因幡 甘音",
+            "text": "ね、おにいちゃん。いまのわたし、ちゃんと見えてた？　王者さんの前まで、ちゃんと——"
+          }
+        ]
+      }
+    },
+    "exhibitionFeel": {
+      "anticipationMs": 70,
+      "recoveryMs": 730,
+      "resetMs": 20,
+      "hitStopMs": 30
+    }
+  },
+  "characterSelection": {
+    "amane": {
+      "image": "assets/characters/amane/selection_cute_20260918.png"
+    }
+  },
+  "extrasTitle": {
+    "title": "瑞花＆優君編",
+    "description": "瑞花を応援する、もうひとつのゲーム。",
+    "image": "assets/title/title_main.png"
+  },
+  "cornerGuideMessages": {
+    "red": "赤線が追加されました。",
+    "blue": "青線が追加されました。",
+    "targets": "赤線は判定勝ち以上、青線はKO勝ちの目標です。次回以降の挑戦で参考にしてください。",
+    "context": "各線は、ほかの能力を現在のままにした場合の目標です。能力や習得技によって位置が変わり、ほかの能力も必要な場合や、すでに達成している場合もあります。",
+    "koOnly": "ギャル戦はKO決着のみです。この試合では赤線の勝利目標もKO勝ちにつながります。"
+  }
+}
