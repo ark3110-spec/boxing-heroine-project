@@ -1,6 +1,6 @@
-import { GALLERY_BASE_ITEMS, STORAGE_KEYS } from "./data.js?v=20260920-gallery-spoilers-a1";
+import { GALLERY_BASE_ITEMS, STORAGE_KEYS } from "./data.js?v=20260921-v110-yukito-a1";
 
-import { CONTENT } from "./content.js?v=20260920-gallery-spoilers-a1";
+import { CONTENT } from "./content.js?v=20260921-v110-yukito-a1";
 
 export const LOCKED_HIDDEN_CONTENT_HINT = "特定の条件を満たすと解放されます。";
 

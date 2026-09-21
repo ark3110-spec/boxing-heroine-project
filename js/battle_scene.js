@@ -1,4 +1,4 @@
-import { playSfx, unlockAudio } from "./audio.js?v=20260920-gallery-spoilers-a1";
+import { playSfx, unlockAudio } from "./audio.js?v=20260921-v110-yukito-a1";
 
 // battle_scene.js — 試合ログ駆動の汎用試合演出エンジン（設計承認 2026-07-03）
 //

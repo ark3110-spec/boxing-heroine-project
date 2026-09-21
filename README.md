@@ -4,7 +4,7 @@
 
 **[ブラウザで遊ぶ / Play in your browser](https://ark3110-spec.github.io/boxing-heroine-project/)**
 
-- バージョン / Version: **v1.0.0**
+- バージョン / Version: **v1.1.0**
 - 日本語・英語に対応。オプションから言語・音量を変更できます。
 - Japanese and English are available in Options, along with audio settings.
 - マウスまたはタップで操作します。スマートフォンでも遊べます。

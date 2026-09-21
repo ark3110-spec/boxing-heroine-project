@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "./data.js?v=20260920-gallery-spoilers-a1";
+import { STORAGE_KEYS } from "./data.js?v=20260921-v110-yukito-a1";
 
 const SETTINGS_VERSION = 2;
 const DEFAULT_SETTINGS = Object.freeze({

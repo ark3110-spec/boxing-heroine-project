@@ -48,9 +48,10 @@
     "background": "assets/backgrounds/chairman_office_20260918.png"
   },
   "yukitoGuide": {
+    "availableFromStart": true,
     "routeVersion": "20260917-1",
     "title": "雪兎ちゃん攻略モード",
-    "description": "新規開始から16週の保証ルートを案内します。王者戦後の挑戦状は「受ける」を選んでね。",
+    "description": "新規開始から育成の手順を案内します。",
     "onRoute": "今週はこれがおすすめ！",
     "guarantee": "この順番ならギャル戦まで大丈夫だよ。",
     "deviationWarning": "雪兎ちゃんの保証ルートから外れます。この練習で進めると、以後の勝利は保証対象外です。",

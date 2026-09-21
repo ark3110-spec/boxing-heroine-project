@@ -1,5 +1,5 @@
-import { COMMAND_TEXTS, STAGE_TEXTS } from "./texts.js?v=20260920-gallery-spoilers-a1";
-import { CONTENT } from "./content.js?v=20260920-gallery-spoilers-a1";
+import { COMMAND_TEXTS, STAGE_TEXTS } from "./texts.js?v=20260921-v110-yukito-a1";
+import { CONTENT } from "./content.js?v=20260921-v110-yukito-a1";
 
 export const STORAGE_KEYS = {
   gallery: "boxing-game-gallery",

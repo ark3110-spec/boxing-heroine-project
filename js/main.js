@@ -1,23 +1,23 @@
-import { trainingEventLines, previewEventProgress, matchPresentation, victoryReaction, formatMatchScore, isSavedRevengeAttempt } from "./campaign_presentation.js?v=20260920-gallery-spoilers-a1";
-import { pixelReady, pixelActorMarkup, mountPixelActors, clearPixelActors, playPixelTraining, playPixelRevenge } from "./pixel_scene.js?v=20260920-gallery-spoilers-a1";
-import { COMMANDS, getStageCommands } from "./data.js?v=20260920-gallery-spoilers-a1";
-import { createGameState, advanceTurn, getCommandState, previewCommandStats } from "./game.js?v=20260920-gallery-spoilers-a1";
-import { getGalleryItems, getGyaruClearProgress, loadReachedEndings, loadUnlockedGallery, unlockGalleryItem, unlockEventArtwork, LOCKED_HIDDEN_CONTENT_HINT } from "./gallery.js?v=20260920-gallery-spoilers-a1";
-import { hasSeenDialogue, markDialogueSeen } from "./dialogue_log.js?v=20260920-gallery-spoilers-a1";
-import { STAGES, applyHeroineName, canChallengeHiddenRound, createCampaignStage, getAcquiredMoves, getTrainingMatchForecast, getTrainingStatTargets, resolveCampaignOpponent } from "./stages.js?v=20260920-gallery-spoilers-a1";
-import { playActionSequence } from "./sequence.js?v=20260920-gallery-spoilers-a1";
-import { playBattleScene, getRoundBattlePresentation } from "./battle_scene.js?v=20260920-gallery-spoilers-a1";
-import { getSpectatorFighters, getSpectatorMove, createSpectatorCard } from "./spectator.js?v=20260920-gallery-spoilers-a1";
-import { CONTENT } from "./content.js?v=20260920-gallery-spoilers-a1";
-import { loadCampaignSave, saveCampaignProgress, clearCampaignSave } from "./campaign_save.js?v=20260920-gallery-spoilers-a1";
-import { getAudioSettings, setAudioSettings, playSfx as playConfiguredSfx, unlockAudio, playBgm, stopBgm, configureAudioSources } from "./audio.js?v=20260920-gallery-spoilers-a1";
-import { resolveDialoguePresentation } from "./content_media.js?v=20260920-gallery-spoilers-a1";
-import { getCornerProgress, recordCornerProgress, resetCornerProgress, getEffectiveCornerThresholds } from "./corner_progress.js?v=20260920-gallery-spoilers-a1";
+import { trainingEventLines, previewEventProgress, matchPresentation, victoryReaction, formatMatchScore, isSavedRevengeAttempt } from "./campaign_presentation.js?v=20260921-v110-yukito-a1";
+import { pixelReady, pixelActorMarkup, mountPixelActors, clearPixelActors, playPixelTraining, playPixelRevenge } from "./pixel_scene.js?v=20260921-v110-yukito-a1";
+import { COMMANDS, getStageCommands } from "./data.js?v=20260921-v110-yukito-a1";
+import { createGameState, advanceTurn, getCommandState, previewCommandStats } from "./game.js?v=20260921-v110-yukito-a1";
+import { getGalleryItems, getGyaruClearProgress, loadReachedEndings, loadUnlockedGallery, unlockGalleryItem, unlockEventArtwork, LOCKED_HIDDEN_CONTENT_HINT } from "./gallery.js?v=20260921-v110-yukito-a1";
+import { hasSeenDialogue, markDialogueSeen } from "./dialogue_log.js?v=20260921-v110-yukito-a1";
+import { STAGES, applyHeroineName, canChallengeHiddenRound, createCampaignStage, getAcquiredMoves, getTrainingMatchForecast, getTrainingStatTargets, resolveCampaignOpponent } from "./stages.js?v=20260921-v110-yukito-a1";
+import { playActionSequence } from "./sequence.js?v=20260921-v110-yukito-a1";
+import { playBattleScene, getRoundBattlePresentation } from "./battle_scene.js?v=20260921-v110-yukito-a1";
+import { getSpectatorFighters, getSpectatorMove, createSpectatorCard } from "./spectator.js?v=20260921-v110-yukito-a1";
+import { CONTENT } from "./content.js?v=20260921-v110-yukito-a1";
+import { loadCampaignSave, saveCampaignProgress, clearCampaignSave } from "./campaign_save.js?v=20260921-v110-yukito-a1";
+import { getAudioSettings, setAudioSettings, playSfx as playConfiguredSfx, unlockAudio, playBgm, stopBgm, configureAudioSources } from "./audio.js?v=20260921-v110-yukito-a1";
+import { resolveDialoguePresentation } from "./content_media.js?v=20260921-v110-yukito-a1";
+import { getCornerProgress, recordCornerProgress, resetCornerProgress, getEffectiveCornerThresholds } from "./corner_progress.js?v=20260921-v110-yukito-a1";
 
-import { createYukitoGuide, getYukitoGuideStatus, recordYukitoGuideStep, yukitoIconMarkup, loadYukitoIntroduction, recordYukitoIntroduction } from "./yukito_guide.js?v=20260920-gallery-spoilers-a1";
+import { createYukitoGuide, getYukitoGuideStatus, recordYukitoGuideStep, yukitoIconMarkup, loadYukitoIntroduction, recordYukitoIntroduction } from "./yukito_guide.js?v=20260921-v110-yukito-a1";
 
-import { getLanguage, englishAvailable, setLanguage, localizeUI, observeLocalizedUI } from "./i18n.js?v=20260920-gallery-spoilers-a1";
-import { GAME_VERSION, SAVE_VERSION } from "./version.js?v=20260920-gallery-spoilers-a1";
+import { getLanguage, englishAvailable, setLanguage, localizeUI, observeLocalizedUI } from "./i18n.js?v=20260921-v110-yukito-a1";
+import { GAME_VERSION, SAVE_VERSION } from "./version.js?v=20260921-v110-yukito-a1";
 
 const app = document.querySelector("#app");
 configureAudioSources(CONTENT.audio);
@@ -67,12 +67,12 @@ function hasPreviousYukitoEncounter() {
 }
 
 function canUseYukitoGuide() {
-  return DEV_PREVIEW_ENABLED || hasPreviousYukitoEncounter() || state.campaign?.yukitoGuide?.enabled === true;
+  return CONTENT.campaign.yukitoGuide?.availableFromStart === true || DEV_PREVIEW_ENABLED || hasPreviousYukitoEncounter() || state.campaign?.yukitoGuide?.enabled === true;
 }
 function playSfx(id) {
   return playConfiguredSfx(id, { builtin: state.currentStage?.mode === "hidden" && ["conversation", "game", "victory-fight", "yarisugi-fight", "ending"].includes(state.screen) });
 }
-const ASSET_VERSION = "20260920-gallery-spoilers-a1";
+const ASSET_VERSION = "20260921-v110-yukito-a1";
 const acquiredMoveRenderSnapshots = new WeakMap();
 const TRAINING_STAT_LABELS = {
   pow: "POW",
